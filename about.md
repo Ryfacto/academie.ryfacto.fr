@@ -10,7 +10,7 @@ permalink: /a-propos/
 
 ## Bonjour, je m'appelle Nicolas Verinaud
 
-### L'objectif de ce site est de t'aider à produire des logiciels sans bugs.
+### L'objectif de ce site est de t'aider à produire des apps iOS sans bugs.
 
 <p class="clear space-top-1"></p>
 
