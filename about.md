@@ -10,7 +10,7 @@ permalink: /a-propos/
 
 ## Bonjour, je m'appelle Nicolas Verinaud
 
-### L'objectif de ce site est de t'aider à produire des apps iOS sans bugs.
+### L'objectif de ce site est de vous aider à produire des apps iOS sans bugs.
 
 <p class="clear space-top-1"></p>
 
@@ -30,11 +30,11 @@ J'en ai eu assez de devoir __réécrire de zéro tous les deux ans__.
 
 Alors je me suis mis au __code de qualité__.
 
-Et je __partage__ ici ce que je sais avec toi !
+Et je __partage__ ici ce que je sais avec vous !
 
 Je suis devenu un véritable __maniaque de la livraison continue__.
 
-Si tu veux connaître toute l'histoire, tu peux [regarder cette vidéo](https://youtu.be/NwL3N5vV-qw).
+Si vous voulez connaître toute l'histoire, je raconte tout [dans cette vidéo](https://youtu.be/NwL3N5vV-qw).
 
 Sinon, quand je ne suis pas en train de courir dans la roue Red-Green-Refactor, je joue avec mon petit garçon _Thomas_ ou à Zelda avec ma femme _Marie_.
 
