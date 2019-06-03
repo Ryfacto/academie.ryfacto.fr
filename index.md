@@ -10,7 +10,7 @@ Ce n'est pas facile d'éviter les bugs.
 
 À chaque modification de code, ils risquent d'apparaître.
 
-Pour les éviter, __vous deveez comprendre pourquoi ils apparaissent et comment éviter leur prolifération.__
+Pour les éviter, __vous devez comprendre pourquoi ils apparaissent et comment éviter leur prolifération.__
 
 Bonne nouvelle : ça s'apprend, c'est passionnant et ça marche !
 

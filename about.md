@@ -24,7 +24,7 @@ __Je crée des apps iOS depuis 2010.__
 
 J'ai créé des monstruosités dans mon code (classes de plus de 5000 lignes !).
 
-Puis un jour j'en ai eu assez de voir __ma productivité être réduite à néant__.
+Puis un jour, j'en ai eu assez de voir __ma productivité être réduite à néant__.
 
 J'en ai eu assez de devoir __réécrire de zéro tous les deux ans__.
 
