@@ -2,6 +2,8 @@
 layout: home
 ---
 
+<div></div>
+
 # Comment créer des apps iOS sans bugs
 
 Ce n'est pas facile d'éviter les bugs.
