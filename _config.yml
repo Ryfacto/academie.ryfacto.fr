@@ -26,7 +26,10 @@ defaults:
       scope:
         path: "" # all paths
       values:
-        image: /images/logo.jpg
+        image:
+          path: /images/logo.jpg
+          width: 300
+          height: 89
 
 # Build settings
 markdown: kramdown
