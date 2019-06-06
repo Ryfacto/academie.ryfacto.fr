@@ -4,19 +4,21 @@ layout: home
 
 <div></div>
 
-<h1 class="headline">Comment créer des apps iOS sans bugs</h1>
+<h1 class="headline">Créez & livrez des apps iOS <br /><em>plus vite que votre ombre</em></h1>
 
-Ce n'est pas facile d'éviter les bugs.
+Livrer tous les jours de la valeur, des fonctionnalités...__rêve ou réalité ?__
 
-À chaque modification de code, ils risquent d'apparaître.
+Je le fais depuis __des années__ dans toutes les apps que l'on me confie.
 
-Pour les éviter, __vous devez comprendre pourquoi ils apparaissent et comment éviter leur prolifération.__
+Cela repose sur __deux piliers__ :
+* en __faire moins__ en découpant le besoin en petits morceaux apportant de la valeur,
+* le __faire mieux__ en produisant du code de qualité.
 
 Bonne nouvelle : ça s'apprend, c'est passionnant et ça marche !
 
 ## Série "iOS Craft"
 
-Dans cette série, je vous apprends __tout ce que je sais__ pour créer des apps iOS __sans bugs__.
+Dans cette série, je vous apprends __tout ce que je sais__ pour créer & livrer des apps iOS __à la vitesse de la lumière__.
 
 Nous verrons, dans le premier chapitre, __"TDD & les idées reçues sur le développement"__,
 que produire du code de qualité n'est pas plus long, au contraire, qu'il va vous rendre plus
