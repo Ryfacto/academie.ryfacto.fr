@@ -1,6 +1,25 @@
 ---
 ---
 
+.site-header {
+  background-color: #202A4A;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.site-nav {
+  margin-top: 18px;
+  background-color: #202A4A;
+}
+
+.site-nav .menu-icon > svg {
+  fill: white;
+}
+
+.site-nav .page-link {
+  color: white;
+}
+
 .about .left {
   float: left;
 }
