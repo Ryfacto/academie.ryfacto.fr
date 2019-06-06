@@ -1,10 +1,11 @@
 ---
 layout: home
+image: /images/logo.png
 ---
 
 <div></div>
 
-# Comment créer des apps iOS sans bugs
+<h1 class="headline">Comment créer des apps iOS sans bugs</h1>
 
 Ce n'est pas facile d'éviter les bugs.
 
@@ -18,31 +19,13 @@ Bonne nouvelle : ça s'apprend, c'est passionnant et ça marche !
 
 Dans cette série, je vous apprends __tout ce que je sais__ pour créer des apps iOS __sans bugs__.
 
-Nous verrons, dans le premier chapitre, __"TDD & les fausses idées sur le développement"__,
+Nous verrons, dans le premier chapitre, __"TDD & les idées reçues sur le développement"__,
 que produire du code de qualité n'est pas plus long, au contraire, qu'il va vous rendre plus
 efficace ! Et oui ! Quand on ne passe pas son temps à corriger des bugs, on va plus vite ! 😉
 
 Ne passez pas à côté en vous __inscrivant à la newsletter !__
 
-<div id="mc_embed_signup">
-  <form action="https://nverinaud.us14.list-manage.com/subscribe/post?u=3186523633c3a45b811330723&amp;id=f871b8cb85" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-
-      <h3>Ne rien manquer des prochains chapitres "iOS Craft"</h3>
-
-      <div class="mc-field-group">
-      	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Votre e-mail" required>
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_3186523633c3a45b811330723_f871b8cb85" tabindex="-1" value=""></div>
-        <input type="submit" value="S'inscrire" name="subscribe" id="mc-embedded-subscribe" class="button">
-        <div class="clear"></div>
-      </div>
-    	<div id="mce-responses" class="clear">
-    		<div class="response" id="mce-error-response" style="display:none"></div>
-    		<div class="response" id="mce-success-response" style="display:none"></div>
-    	</div>
-    </div>
-  </form>
-</div>
+{%- include newsletter_signup.html -%}
 
 ## Mais au fait, qui suis-je ?
 

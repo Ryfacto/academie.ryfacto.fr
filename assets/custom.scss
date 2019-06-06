@@ -20,13 +20,35 @@
   color: white;
 }
 
-.about .left {
+.about .left,
+.author .left {
   float: left;
 }
 
-.about img {
+.author p a {
+  padding-left: 10px;
+}
+
+.about img,
+.author img {
   width: 150px;
   margin-right: 30px;
+}
+
+.author {
+  padding: 0 20px;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+}
+
+.author h4 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.author p {
+  font-size: 0.9em;
 }
 
 .clear {
@@ -43,6 +65,13 @@ h2 {
 
 .home h2 {
   border-bottom: 1px solid #ccc;
+}
+
+.home h1.headline {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  padding: 60px 0;
 }
 
 #mc_embed_signup {
