@@ -51,3 +51,15 @@ Si on est samedi matin, je suis sûrement en train de cuisiner pour la semaine (
 * [Par email](mailto:nicolas.verinaud@ryfacto.fr)
 * [Suivez-moi sur twitter](https://www.twitter.com/nverinaud)
 * [Ajoutez-moi sur LinkedIn](https://www.linkedin.com/in/nicolas-verinaud-7829881a/)
+
+<p class="space-top-1"></p>
+
+---
+
+<p class="space-top-1"></p>
+
+# M'embaucher
+
+J'ai fondé ma société [Ryfacto](https://www.ryfacto.fr) qui propose de la création de logiciels & de l'accompagnement sur-mesure.
+
+Je peux vous aider, vous et vos équipes, à __retrouver productivité, créativité et amour du travail bien fait__. [Contactez moi !](mailto:nicolas.verinaud@ryfacto.fr)
