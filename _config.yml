@@ -21,6 +21,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://academie.ryfacto.fr" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: nverinaud
 author: Nicolas Verinaud
+defaults:
+  -
+      scope:
+        path: "" # all paths
+      values:
+        image: /images/logo.jpg
 
 # Build settings
 markdown: kramdown

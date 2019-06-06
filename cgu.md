@@ -2,7 +2,6 @@
 layout: page
 title: Conditions Générales d'Utilisation & Mentions Légales
 permalink: /cgu/
-image: /images/logo.png
 ---
 
 Vous avez le droit de reproduire tout ou partie du contenu présent sur ce site librement

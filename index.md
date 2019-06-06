@@ -1,6 +1,5 @@
 ---
 layout: home
-image: /images/logo.png
 ---
 
 <div></div>
