@@ -16,7 +16,7 @@
 title: Académie Ryfacto
 lang: fr
 description: >- # this means to ignore newlines until "baseurl:"
-  Créez & livrez des apps iOS plus vite que votre ombre grâce à l'Académie Ryfacto !
+  Faites évoluer votre code facilement & rapidement, sans rien casser, grâce à l'Académie Ryfacto !
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://academie.ryfacto.fr" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: nverinaud

@@ -4,25 +4,27 @@ layout: home
 
 <div></div>
 
-<h1 class="headline">Créez & livrez des apps iOS <br /><em>plus vite que votre ombre</em></h1>
+<h1 class="headline">Faites évoluer votre code Swift facilement & rapidement, <br /><em>sans rien casser !</em></h1>
 
-Livrer tous les jours de la valeur, des fonctionnalités...__rêve ou réalité ?__
+Ce n'est pas facile de faire évoluer son code rapidement.
 
-Je le fais depuis __des années__ dans toutes les apps que l'on me confie.
+Le code devient de plus en plus complexe avec le temps, il grossit !
 
-Cela repose sur __deux piliers__ :
-* en __faire moins__ en découpant le besoin en petits morceaux apportant de la valeur,
-* le __faire mieux__ en produisant du code de qualité.
+Pour continuer à le faire évoluer facilement & rapidement, __vous devez apprendre
+à maîtriser sa complexité.__
 
 Bonne nouvelle : ça s'apprend, c'est passionnant et ça marche !
 
 ## Série "iOS Craft"
 
-Dans cette série, je vous apprends __tout ce que je sais__ pour créer & livrer des apps iOS __à la vitesse de la lumière__.
+Dans cette série, je vous apprends __tout ce que je sais__ pour __maîtriser la
+complexité d'une app iOS écrite en Swift__.
 
-Nous verrons, dans le premier chapitre, __"TDD & les idées reçues sur le développement"__,
-que produire du code de qualité n'est pas plus long, au contraire, qu'il va vous rendre plus
-efficace ! Et oui ! Quand on ne passe pas son temps à corriger des bugs, on va plus vite ! 😉
+Je vous parlerai des __valeurs fondatrices__ qui guident cette maîtrise.
+
+Je vous montrerai ensuite (dans le premier chapitre intitulé __"TDD & les idées reçues sur le développement"__),
+que produire du code de qualité ne prends pas plus de temps. Au contraire, cela va vous rendre plus
+efficace !
 
 Ne passez pas à côté en vous __inscrivant à la newsletter !__
 
