@@ -5,6 +5,10 @@
   background-color: #202A4A;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  .wrapper {
+    padding-right: 55px;
+  }
 }
 
 .site-nav {
@@ -79,6 +83,42 @@ h2 {
   padding: 20px;
   border: 1px dotted #ccc;
   background-color: #ffffe6;
+}
+
+.social-sharing-content {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  p {
+    margin: 10px;
+  }
+}
+
+@media screen and (min-width: 950px) {
+
+  .social-sharing {
+    width: 800px !important;
+    position: relative;
+    left: -90px;
+  }
+
+  .social-sharing-content {
+    position: fixed;
+    top: 100px;
+    width: 60px;
+
+    p:first-child {
+      display: none;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
 }
 
 #mc_embed_signup {

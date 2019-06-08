@@ -15,6 +15,22 @@ layout: default
     J'ai écrit ce chapitre pendant <strong>{{ page.writing_time }}h</strong> et j'ai eu <strong>{{ page.ahah }} <em>"ah-ah moment"</em></strong> sous la douche ou en pleine nuit.
   </p>
 
+  <aside class="social-sharing">
+    <div class="social-sharing-content">
+      <p>Partager :</p>
+      <p>
+        <a class="article-actions-tweet-button" id="article-actions-tweet-button" rel="noopener" target="_blank" href="https://twitter.com/intent/tweet?text=&quot;{{ page.title | url_encode }}&quot; par @{{ site.twitter_username| escape }} %23AcademieRyfacto {{ site.url }}{{ page.url }}">
+          <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg>Twitter
+        </a>
+      </p>
+      <p>
+        <a class="article-actions-linkedin-button" id="article-actions-linkedin-button" rel="noopener" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title | url_encode }}&amp;source={{ site.social_source }}">
+          <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg>LinkedIn
+        </a>
+      </p>
+    </div>
+  </aside>
+
   {%- include newsletter_signup.html -%}
 
   {%- include author.html -%}
