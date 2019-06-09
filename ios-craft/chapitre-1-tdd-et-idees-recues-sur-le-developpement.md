@@ -5,4 +5,9 @@ description: Le TDD, c'est lent ! Je n'ai déjà pas le temps de faire les featu
 published: false
 writing_time: 3
 ahah: 1
+comments:
+    #- author: nverinaud
+      #author_url: "twitter.com/nverinaud"
+      #avatar: ""
+      #body: "<p>Exemple de commentaire</p>"
 ---

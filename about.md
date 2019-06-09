@@ -48,7 +48,7 @@ Si on est samedi matin, je suis sûrement en train de cuisiner pour la semaine (
 
 # Me contacter
 
-* [Par email](mailto:nicolas.verinaud@ryfacto.fr)
+* [Par email](mailto:{{ site.author_email }})
 * [Suivez-moi sur twitter](https://www.twitter.com/nverinaud)
 * [Ajoutez-moi sur LinkedIn](https://www.linkedin.com/in/nicolas-verinaud-7829881a/)
 

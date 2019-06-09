@@ -1,0 +1,32 @@
+<div class="comments">
+  <div class="new-comment">
+    {% capture subject %}#AcadémieRyfacto | Nouveau commentaire sur : "{{ page.title | replace: "&", "%26" }}"{% endcapture %}
+    {% capture body %}Concernant : {{ site.url }}{{ page.url }}{% endcapture %}
+    <p>
+      <a href="mailto:{{ site.comment_email }}?subject={{ subject | escape_once }}&amp;body={{ body | escape_once }}">
+        Envoyer un commentaire
+      </a>
+    </p>
+  </div>
+  {% if page.comments %}
+    {% for comment in page.comments %}
+      <div class="comment">
+        <div class="comment-head">
+          {% if comment.avatar %}
+            <img src="{{ comment.avatar }}" alt="avatar" />
+          {% else %}
+            <img src="/images/default_avatar.png" alt="avatar" />
+          {% endif %}
+          {% if comment.author_url %}
+            <h4><a href="{{ comment.author_url }}" rel="nofollow" target="_blank">{{ comment.author }}</a></h4>
+          {% else %}
+            <h4>{{ comment.author }}</h4>
+          {% endif %}
+        </div>
+        <div class="comment-content">
+          {{ comment.body }}
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>

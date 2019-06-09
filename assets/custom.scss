@@ -98,6 +98,48 @@ h2 {
   }
 }
 
+.comments {
+  padding: 30px 10px 10px 10px;
+
+  .new-comment {
+    text-align: center;
+
+    a {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 20px;
+      margin: 10px;
+      margin-bottom: 30px;
+      display: block;
+    }
+
+    a:hover {
+      text-decoration: none;
+      background-color: #eee;
+    }
+  }
+
+  .comment {
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 20px;
+  }
+
+  .comment-head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+
+    img {
+      width: 75px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 @media screen and (min-width: 950px) {
 
   .social-sharing {
