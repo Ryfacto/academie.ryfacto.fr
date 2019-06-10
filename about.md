@@ -10,7 +10,7 @@ permalink: /a-propos/
 
 ## Bonjour, je m'appelle Nicolas Verinaud
 
-<h3>L'objectif de ce site est de vous aider à faire évoluer votre code <em>facilement & rapidement, sans rien casser !</em></h3>
+<h3>L'objectif de ce site est de faire passer l'architecture de votre app iOS <em>au niveau supérieur</em></h3>
 
 <p class="clear space-top-1"></p>
 
