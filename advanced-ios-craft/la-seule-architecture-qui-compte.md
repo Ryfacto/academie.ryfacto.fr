@@ -2,9 +2,9 @@
 layout: article
 title: La seule architecture qui compte
 description: Existe-t-il l'architecture parfaite ? Quelles sont les caractéristiques d'une bonne architecture ? Réponses dans cet article !
-date: 11/06/2019
+date: 15/06/2019
 published: true
-writing_time: 1
+writing_time: 2
 ahah: 1
 comments:
     #- author: nverinaud
@@ -15,7 +15,7 @@ comments:
 
 Ah, l'architecture d'une app iOS.
 
-Vaste sujet avec lequel je flirte depuis des années.
+Vaste sujet qui me préoccupe depuis que j'ai commencé à créer des apps iOS en 2010 (sortie du premier iPad, de l'iPhone 4 et d'iOS 4 !).
 
 À chaque nouvelle app se pose cette question fatidique : __quelle archi mettre en place ?__
 
@@ -49,15 +49,15 @@ Comment déterminer que le code de mon app iOS est __bien organisé__ ?
 
 Primo, __je trouve rapidement ce que je cherche__.
 
-_Ex: je dois modifier l'écran de connexion, il doit bien exister un `LoginViewController` ou quelque chose comme ça._
+_Ex:_ je dois modifier l'écran de connexion, il doit bien exister un `LoginViewController` ou quelque chose comme ça.
 
 Deuxio, __je ne me perds pas en cours de route__.
 
-_Contre-Ex: le `LoginViewController` fait quoi exactement ? Dans `viewDidLoad` il configure des singletons, wtf?, modifie des contraintes, wtf??, fait un appel serveur, wtf???, il appelle des méthodes sur une super classe pour...je suis perdu je comprends plus rien !_
+_Contre-Ex:_ le `LoginViewController` fait quoi exactement ? Dans `viewDidLoad` il configure des singletons (wtf?), modifie des contraintes (wtf??), fait un appel serveur (wtf???), il appelle des méthodes sur une super classe pour...je suis perdu je comprends plus rien !
 
 Tertio, __les dépendances ne partent pas dans tous les sens__.
 
-_Contre-Ex: `LoginViewController` dépend de `ClientAPI` qui dépend de `Configuration` qui dépend de `ClientAPI`, wtf?_
+_Contre-Ex:_ `LoginViewController` dépend de `ClientAPI` qui dépend de `Configuration` qui dépend de `ClientAPI`, wtf?
 
 ### Optimiser la conception de l'ensemble
 
@@ -65,24 +65,104 @@ Comment déterminer que la conception est optimisée ?
 
 Primo, __je comprends facilement ce que le code fait__.
 
-_Ex: `LoginViewController` a une méthode `onLoginButtonTapped()` qui appelle `behavior.login()`._
+_Ex:_ `LoginViewController` a une méthode `onLoginButtonTapped()` qui appelle `behavior.login()`.
 
-_Contre-Ex: `LoginViewController` a une méthode `buttonTapped(sender: NSObject)` qui teste si `sender == button1` et qui fait plein de trucs sur 200 lignes avec un niveau d'imbrication au-delà de toute raison et peut-être problablement pourquoi pas en rapport avec un appel API peut-être ?_
+_Contre-Ex:_ `LoginViewController` a une méthode `buttonTapped(sender: NSObject)` qui teste si `sender == button1` et qui fait plein de trucs sur 200 lignes avec un niveau d'imbrication au-delà de toute raison et peut-être problablement pourquoi pas en rapport avec un appel API peut-être ?
 
 Deuxio, j'arrive à __changer facilement le code__.
 
-_Contre-Ex: je modifie un peu le login pour corriger un bug, je livre, j'ai 36 nouveaux bugs, wtf?_
+_Contre-Ex:_ je modifie un peu le login pour corriger un bug, je livre, j'ai 36 nouveaux bugs, wtf?
 
-<!--
+### Un usage déterminé
 
-Plan
-- Architecture : définition
-- Ce que j'attends d'une bonne architecture
-- Le spectre de l'over-engineering
-- Études de quelques architectures existantes
-  - MVC
-  - VIPER
-  - MVVM
-  - MVVM+Coordinator
+Comment déterminer que la conception répond à un usage précis ?
 
- -->
+Primo, il n'y a __pas de code au cas où, de sur-ingénierie__.
+
+_Contre-Ex:_ on doit afficher des informations textuelles dans la v1. Je crée un `InformationsBuilder` qui accepte une dépendance implémentant le protocole `InformationsStrategy` et je crée une classe `TextualInformationsStrategy` qui implémente ce protocole.
+
+_Autre contre-ex:_ je vais créer une DSL de configuration de style, au cas où on doit changer le thème de l'app un jour.
+
+Deuxio, il n'y a vraiment pas de code au cas où !
+
+Il m'est déjà arrivé de complexifier le code en essayant d'anticiper les besoins. C'est tentant et motivant de créer du code __réutilisable__ et __"joli"__. Mais dans 95% des cas c'est _too much_.
+
+> Ma philosophie est plutôt de __dupliquer pour trouver la bonne abstraction__.
+
+Je préfère dupliquer une ou deux fois, puis prendre du recul pour trouver comment factoriser le code, afin de créer des abstractions qui ont une réelle utilité et un véritable sens.
+
+## Une _bonne_ conception
+
+Une bonne architecture veut donc avant tout dire une bonne conception.
+
+Une bonne conception respecte les critères que j'ai listés ci-dessus et que je rappelle ici :
+* je trouve rapidement ce que je cherche,
+* je ne me perds pas en cours de route,
+* les dépendances ne partent pas dans tous les sens,
+* je comprends facilement ce que le code fait,
+* j'arrive à changer facilement le code,
+* il n'y a pas de code au cas où,
+* le code répond à un usage déterminé.
+
+Je ne vais pas vous le cacher, avoir une architecture qui remplie tous ces critères __est très difficile__.
+
+Il faut déjà réussir à bien comprendre le besoin, à déterminer précisément l'usage.
+
+Il ne faut pas anticiper des demandes qui n'arriveront peut-être jamais.
+
+Il faut rendre son code compréhensible par les autres humains qui vont le lire (et nous ne sommes pas tous égaux à ce niveau).
+
+Il faut faire face aux particularités des frameworks et librairies qu'on utilise.
+
+Autant vous dire qu'avoir juste _du premier coup_ relève du miracle !
+
+### Faire émerger la conception
+
+_Mais si je n'arrive pas à avoir juste du premier coup...cela veut dire que je vais devoir changer ma conception en cours de route, la faire évoluer ?_
+
+Exactement ! C'est ce que j'appelle __faire émerger la conception__.
+
+_Oh ! Et du coup faire émerger la conception revient à créer..._
+
+__Une architecture émergente !__
+
+Je pars de deux hypothèses pour justifier le fait de faire émerger l'architecture, plutôt que de la figer dans le marbre à l'avance.
+
+1. Il est impossible d'imaginer la bonne conception du premier coup.
+2. Le besoin change.
+
+J'ai déjà détaillé le premier point ci-dessus, passons au second.
+
+### Le besoin change
+
+Ah, si seulement les utilisateurs, utilisatrices, clientes & clients arrêtaient de changer tout le temps d'avis ! Ce serait beaucoup plus simple ! Nous aurions un cahier des charges figé et des spécifications fonctionnelles figées. Il nous serait alors si simple de concevoir une app qui réponde exactement à ce qui est demandé. Nous pourrions prendre le temps de bien concevoir, de faire de beaux diagrammes. Puis nous livrerions un logiciel bien conçu et nous passerions au logiciel suivant.
+
+_Le rêve quoi !_
+
+Vraiment ?
+
+Nous savons que ce n'est __jamais__ le cas. Qui a déjà vécu cette situation, honnêtement ?
+
+__Le besoin change !__
+
+Pourquoi change-t-il ?
+
+Car créer un logiciel est avant tout un travail de __communication, de compréhension et d'empathie__.
+
+Entre ce que l'utilisateur a en tête, ce qu'il explique, ce que la développeuse comprends et ce qu'elle exprime par code ; les risques de mauvaise interprétation sont légions ! _(Ajoutez quelques intermédiaires entre les deux personnes et vous multiplirez ces risques. Coucou les Product Owner & Proxy Product Owner & Proxy Proxy Proxy...)_
+
+__Ce n'est pas forcément le besoin réel qui change, c'est notre compréhension qui évolue !__ Il nous arrive (souvent) de mal comprendre le besoin réel. Au fur et à mesure que nous créons et livrons le logiciel, nous apprenons des feedbacks ! Et nous devons refléter cette compréhension dans notre code.
+
+## Conclusion
+
+Bonne _architecture_ veut dire bonne _conception_.
+
+Avoir une conception juste du premier coup est impossible car le besoin change, notre compréhension de celui-ci change.
+
+Il faut donc être capable de faire évoluer cette conception, de la faire émerger.
+
+Pour cela, nous devons nous assurer que nous ne cassons rien au passage.
+
+_Et pour ne rien casser...on fait comment ?_
+
+Je vous en parle dans le prochain article. 😉
