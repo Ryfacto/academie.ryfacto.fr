@@ -1,10 +1,10 @@
 ---
 layout: article
 title: La seule architecture qui compte
-description: Existe-t-il l'architecture parfaite ? Quelles sont les caractéristiques d'une bonne architecture ? Réponses dans cet article !
-date: 15/06/2019
+description: Existe-t-il une architecture parfaite ? Quelles sont les caractéristiques d'une bonne architecture ? Réponses dans cet article !
+date: 16/06/2019
 published: true
-writing_time: 2
+writing_time: 3
 ahah: 1
 comments:
     #- author: nverinaud
@@ -19,13 +19,13 @@ Vaste sujet qui me préoccupe depuis que j'ai commencé à créer des apps iOS e
 
 À chaque nouvelle app se pose cette question fatidique : __quelle archi mettre en place ?__
 
-Après tout, c'est une choix important, non ? Une fois l'architecture choisie, impossible de revenir en arrière, n'est-ce pas ?
+Après tout, c'est un choix important, non ? Une fois l'architecture choisie, impossible de revenir en arrière, n'est-ce pas ?
 
 Mais dites-moi, c'est quoi _une architecture_ ?
 
 ## Architecture : définition
 
-Si l'on prends la [définition du Larousse](https://www.larousse.fr/dictionnaires/francais/architecture/5078) :
+Prenons la [définition du Larousse](https://www.larousse.fr/dictionnaires/francais/architecture/5078) :
 
 > Organisation des divers éléments constitutifs d'un système informatique, en vue d'optimiser la conception de l'ensemble pour un usage déterminé.
 
@@ -41,7 +41,7 @@ Maintenant que nous sommes d'accord sur la définition ; quelles sont les caract
 
 Je vais reprendre chacune des notions et tenter de déterminer les caractéristiques que je juge en adéquation avec la définition.
 
-Pour rappel, il s'agit de limiter la réflexion au code d'une app iOS.
+Pour rappel, il s'agit de limiter la réflexion au code d'une app iOS. (Même si, en réalité, cette réflexion est applicable à tous logiciels.)
 
 ### Organisation
 
@@ -53,7 +53,7 @@ _Ex:_ je dois modifier l'écran de connexion, il doit bien exister un `LoginView
 
 Deuxio, __je ne me perds pas en cours de route__.
 
-_Contre-Ex:_ le `LoginViewController` fait quoi exactement ? Dans `viewDidLoad` il configure des singletons (wtf?), modifie des contraintes (wtf??), fait un appel serveur (wtf???), il appelle des méthodes sur une super classe pour...je suis perdu je comprends plus rien !
+_Contre-Ex:_ le `LoginViewController` fait quoi exactement ? Dans `viewDidLoad` : il configure des singletons (wtf?), modifie des contraintes (wtf??), fait un appel serveur (wtf???) ; il appelle des méthodes sur une super classe pour...je suis perdu je ne comprends plus rien !
 
 Tertio, __les dépendances ne partent pas dans tous les sens__.
 
@@ -67,27 +67,31 @@ Primo, __je comprends facilement ce que le code fait__.
 
 _Ex:_ `LoginViewController` a une méthode `onLoginButtonTapped()` qui appelle `behavior.login()`.
 
-_Contre-Ex:_ `LoginViewController` a une méthode `buttonTapped(sender: NSObject)` qui teste si `sender == button1` et qui fait plein de trucs sur 200 lignes avec un niveau d'imbrication au-delà de toute raison et peut-être problablement pourquoi pas en rapport avec un appel API peut-être ?
+_Contre-Ex:_ `LoginViewController` a une méthode `buttonTapped(_ sender: NSObject)` qui teste si `sender == button1` et qui fait plein de trucs sur 200 lignes avec un niveau d'imbrication au-delà de toute raison et problablement un appel API caché au milieu ?
 
-Deuxio, j'arrive à __changer facilement le code__.
+Deuxio, __je retrouve les termes métiers dans le code__.
 
-_Contre-Ex:_ je modifie un peu le login pour corriger un bug, je livre, j'ai 36 nouveaux bugs, wtf?
+_Ex:_ quand je parle avec les utilisatreurs et utilisatrices, ils évoquent des _Recettes_ et des _Ingrédients_ ; dans le code j'ai bien les notions de `Recipe` et d'`Ingredient`.
+
+Tertio, j'arrive à __changer facilement le code__.
+
+_Contre-Ex:_ je modifie le login pour améliorer l'expérience utilisateur, je livre, et j'ai 36 nouveaux bugs à des endroits improbables, _whaaaat?_
 
 ### Un usage déterminé
 
 Comment déterminer que la conception répond à un usage précis ?
 
-Primo, il n'y a __pas de code au cas où, de sur-ingénierie__.
+Primo, il n'y a __pas de code au cas où__.
 
-_Contre-Ex:_ on doit afficher des informations textuelles dans la v1. Je crée un `InformationsBuilder` qui accepte une dépendance implémentant le protocole `InformationsStrategy` et je crée une classe `TextualInformationsStrategy` qui implémente ce protocole.
+_Contre-Ex:_ je dois afficher des informations textuelles dans la v1. Je crée un `InformationsBuilder` qui accepte une dépendance implémentant le protocole `InformationsStrategy` et je crée une classe `TextualInformationsStrategy` qui implémente ce protocole.
 
-_Autre contre-ex:_ je vais créer une DSL de configuration de style, au cas où on doit changer le thème de l'app un jour.
+_Autre contre-ex:_ je vais créer une DSL de configuration de style, au cas où je dois changer le thème de l'app un jour.
 
 Deuxio, il n'y a vraiment pas de code au cas où !
 
-Il m'est déjà arrivé de complexifier le code en essayant d'anticiper les besoins. C'est tentant et motivant de créer du code __réutilisable__ et __"joli"__. Mais dans 95% des cas c'est _too much_.
+Il m'est déjà arrivé de complexifier le code en essayant d'anticiper les besoins. C'est tentant et motivant de créer du code __réutilisable__. Mais dans 95% des cas c'est _too much_.
 
-> Ma philosophie est plutôt de __dupliquer pour trouver la bonne abstraction__.
+> Mieux vaut __dupliquer pour trouver la bonne abstraction__ que créer une mauvaise abstraction.
 
 Je préfère dupliquer une ou deux fois, puis prendre du recul pour trouver comment factoriser le code, afin de créer des abstractions qui ont une réelle utilité et un véritable sens.
 
@@ -100,11 +104,12 @@ Une bonne conception respecte les critères que j'ai listés ci-dessus et que je
 * je ne me perds pas en cours de route,
 * les dépendances ne partent pas dans tous les sens,
 * je comprends facilement ce que le code fait,
+* je retrouve les termes métiers dans le code,
 * j'arrive à changer facilement le code,
 * il n'y a pas de code au cas où,
 * le code répond à un usage déterminé.
 
-Je ne vais pas vous le cacher, avoir une architecture qui remplie tous ces critères __est très difficile__.
+Je ne vais pas vous le cacher, avoir une architecture qui remplit tous ces critères __est très difficile__.
 
 Il faut déjà réussir à bien comprendre le besoin, à déterminer précisément l'usage.
 
@@ -135,7 +140,7 @@ J'ai déjà détaillé le premier point ci-dessus, passons au second.
 
 ### Le besoin change
 
-Ah, si seulement les utilisateurs, utilisatrices, clientes & clients arrêtaient de changer tout le temps d'avis ! Ce serait beaucoup plus simple ! Nous aurions un cahier des charges figé et des spécifications fonctionnelles figées. Il nous serait alors si simple de concevoir une app qui réponde exactement à ce qui est demandé. Nous pourrions prendre le temps de bien concevoir, de faire de beaux diagrammes. Puis nous livrerions un logiciel bien conçu et nous passerions au logiciel suivant.
+Si seulement les utilisateurs, utilisatrices, clientes & clients arrêtaient de changer tout le temps d'avis ! Cela serait beaucoup plus simple ! Nous aurions un cahier des charges figé et des spécifications fonctionnelles figées. Il nous serait alors si simple de concevoir une app qui réponde exactement à ce qui est demandé. Nous pourrions prendre le temps de bien concevoir, de faire de beaux diagrammes. Puis nous livrerions une app bien conçue et nous passerions à la suivante.
 
 _Le rêve quoi !_
 
@@ -147,9 +152,9 @@ __Le besoin change !__
 
 Pourquoi change-t-il ?
 
-Car créer un logiciel est avant tout un travail de __communication, de compréhension et d'empathie__.
+Car créer un logiciel est principalement un travail de __communication, de compréhension et d'empathie__.
 
-Entre ce que l'utilisateur a en tête, ce qu'il explique, ce que la développeuse comprends et ce qu'elle exprime par code ; les risques de mauvaise interprétation sont légions ! _(Ajoutez quelques intermédiaires entre les deux personnes et vous multiplirez ces risques. Coucou les Product Owner & Proxy Product Owner & Proxy Proxy Proxy...)_
+Entre ce que l'utilisateur a en tête, ce qu'il explique, ce que la développeuse comprend et ce qu'elle exprime par code ; les risques de mauvaise interprétation sont légions ! _(Ajoutez quelques intermédiaires entre les deux personnes et vous multiplirez ces risques. Coucou les Product Owner & Proxy Product Owner & Proxy Proxy Proxy...)_
 
 __Ce n'est pas forcément le besoin réel qui change, c'est notre compréhension qui évolue !__ Il nous arrive (souvent) de mal comprendre le besoin réel. Au fur et à mesure que nous créons et livrons le logiciel, nous apprenons des feedbacks ! Et nous devons refléter cette compréhension dans notre code.
 
@@ -157,9 +162,9 @@ __Ce n'est pas forcément le besoin réel qui change, c'est notre compréhension
 
 Bonne _architecture_ veut dire bonne _conception_.
 
-Avoir une conception juste du premier coup est impossible car le besoin change, notre compréhension de celui-ci change.
+Avoir une conception _juste_ du premier coup est impossible car _le besoin change_, notre compréhension de celui-ci change.
 
-Il faut donc être capable de faire évoluer cette conception, de la faire émerger.
+Il faut donc être capable de faire _évoluer_ cette conception, de la faire _émerger_.
 
 Pour cela, nous devons nous assurer que nous ne cassons rien au passage.
 
