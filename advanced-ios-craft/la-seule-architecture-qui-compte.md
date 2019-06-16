@@ -71,7 +71,7 @@ _Contre-Ex:_ `LoginViewController` a une méthode `buttonTapped(_ sender: NSObje
 
 Deuxio, __je retrouve les termes métiers dans le code__.
 
-_Ex:_ quand je parle avec les utilisatreurs et utilisatrices, ils évoquent des _Recettes_ et des _Ingrédients_ ; dans le code j'ai bien les notions de `Recipe` et d'`Ingredient`.
+_Ex:_ quand je parle avec les utilisateurs et utilisatrices, ils évoquent des _Recettes_ et des _Ingrédients_ ; dans le code j'ai bien les notions de `Recipe` et d'`Ingredient`.
 
 Tertio, j'arrive à __changer facilement le code__.
 
