@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://academie.ryfacto.fr" # the base hostname & protocol for your site, e.g. http://example.com
 social_source: "academie.ryfacto.fr"
-twitter_username: nverinaud
+twitter_username: ryfacto_fr
 comment_email: commenter@academie.ryfacto.fr
 author: Nicolas Verinaud
 defaults:
