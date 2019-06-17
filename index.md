@@ -1,5 +1,6 @@
 ---
 layout: home
+id: home
 ---
 
 <div></div>
