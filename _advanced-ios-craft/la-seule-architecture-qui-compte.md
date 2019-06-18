@@ -155,7 +155,7 @@ Pourquoi change-t-il ?
 
 Car créer un logiciel est principalement un travail de __communication, de compréhension et d'empathie__.
 
-Entre ce que l'utilisateur a en tête, ce qu'il explique, ce que la développeuse comprend et ce qu'elle exprime par code ; les risques de mauvaise interprétation sont légions ! _(Ajoutez quelques intermédiaires entre les deux personnes et vous multiplirez ces risques. Coucou les Product Owner & Proxy Product Owner & Proxy Proxy Proxy...)_
+Entre ce que l'utilisateur a en tête, ce qu'il explique, ce que la développeuse comprend et ce qu'elle exprime par code ; les risques de mauvaise interprétation sont légions ! _(Ajoutez quelques intermédiaires entre les deux personnes et vous multiplierez ces risques. Coucou les Product Owner & Proxy Product Owner & Proxy Proxy Proxy...)_
 
 __Ce n'est pas forcément le besoin réel qui change, c'est notre compréhension qui évolue !__ Il nous arrive (souvent) de mal comprendre le besoin réel. Au fur et à mesure que nous créons et livrons le logiciel, nous apprenons des feedbacks ! Et nous devons refléter cette compréhension dans notre code.
 
