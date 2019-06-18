@@ -4,8 +4,8 @@ layout: default
 <article class="post">
 
   <header class="post-header">
-    {% if page.illustration %}
-      <img src="{{ page.illustration | relative_url }}" alt="{{ page.illustration }}" />
+    {% if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image }}" />
     {% endif %}
     <h1 class="post-title">{{ page.title | escape }}</h1>
     <p>Publié le <em>{{ page.date | date: "%d/%m/%Y" }}</em></p>
