@@ -22,6 +22,7 @@ url: "https://academie.ryfacto.fr" # the base hostname & protocol for your site,
 social_source: "academie.ryfacto.fr"
 twitter_username: ryfacto_fr
 comment_email: commenter@academie.ryfacto.fr
+author_email: nicolas.verinaud@ryfacto.fr
 author: Nicolas Verinaud
 defaults:
   -

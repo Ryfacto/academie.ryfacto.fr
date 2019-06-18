@@ -33,3 +33,7 @@ Son numéro de téléphone est : 06 33 21 40 87
 Responsable éditorial : Nicolas Verinaud
 
 Hébergeur : [Github](https://www.github.com)
+
+## Vie privée
+
+C'est par [ici !](/vie-privee)
