@@ -12,6 +12,8 @@ layout: default
     {{ content }}
   </div>
 
+  {%- include newsletter_signup.html -%}
+
   <p class="chapter-value">
     J'ai écrit cet article pendant <strong>{{ page.writing_time }}h</strong> et j'ai eu <strong>{{ page.ahah }} <em>"ah-ah moment"</em></strong> sous la douche ou en pleine nuit. Pour m'aider, partagez-le avec un(e) ami(e) ou sur les réseaux sociaux !
   </p>
@@ -31,8 +33,6 @@ layout: default
       </p>
     </div>
   </aside>
-
-  {%- include newsletter_signup.html -%}
 
   {%- include author.html -%}
 
