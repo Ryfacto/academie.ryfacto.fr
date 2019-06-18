@@ -143,8 +143,27 @@ blockquote {
   }
 }
 
-@media screen and (min-width: 950px) {
+.wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
 
+.post-header h1,
+.post-header p,
+.post-content,
+.site-footer {
+  padding: 0 15px;
+}
+
+.page-content {
+  padding: 15px 0;
+}
+
+.post-header img {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 950px) {
   .social-sharing {
     width: 800px !important;
     position: relative;

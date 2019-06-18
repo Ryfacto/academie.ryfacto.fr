@@ -1,7 +1,8 @@
 ---
 layout: article
+illustration: /images/2019/06/architecture.jpg
 title: La seule architecture qui compte
-description: Existe-t-il une architecture parfaite ? Quelles sont les caractéristiques d'une bonne architecture ? Réponses dans cet article !
+description: Que veut dire "architecture" quand on parle d'un logiciel ? Quelles sont les caractéristiques d'une bonne architecture ?
 date: 16/06/2019
 published: true
 writing_time: 3
