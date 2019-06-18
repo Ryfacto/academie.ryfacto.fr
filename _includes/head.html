@@ -7,4 +7,7 @@
   <link rel="stylesheet" href="{{ "/assets/custom.css" | relative_url }}">
   <link rel="icon" href="/images/favicon.png" type="image/x-icon">
   {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' -%}
+    {%- include analytics.html -%}
+  {%- endif -%}
 </head>
