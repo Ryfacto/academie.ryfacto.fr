@@ -156,7 +156,8 @@ blockquote {
 .post-header h1,
 .post-header p,
 .post-content,
-.site-footer {
+.site-footer,
+.home {
   padding: 0 15px;
 }
 
@@ -166,6 +167,21 @@ blockquote {
 
 .post-header img {
   margin-bottom: 15px;
+}
+
+.site-footer .wrapper ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  margin: 30px 0 80px 0;
+
+  li {
+    padding: 0 4px;
+  }
 }
 
 @media screen and (min-width: 950px) {

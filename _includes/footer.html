@@ -3,31 +3,19 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {%- include cc_icon.html -%}
-          </li>
-          <li>
-            <a href="/cgu">CGU</a>
-          </li>
-          <li>
-            <a href="/vie-privee">Vie Privée</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
+    <ul>
+      <li>
+        {%- include cc_icon.html -%}
+      </li>
+      <li>-</li>
+      <li>
+        <a href="/cgu">CGU</a>
+      </li>
+      <li>-</li>
+      <li>
+        <a href="/vie-privee">Vie Privée</a>
+      </li>
+    </ul>
 
   </div>
 
