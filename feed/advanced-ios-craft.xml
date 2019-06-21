@@ -1,0 +1,40 @@
+---
+permalink: /advanced-ios-craft/feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+  <generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator>
+  <link href="{{ page.permalink | absolute_url }}" rel="self" type="application/atom+xml" />
+  <link href="{{ site.url }}" rel="alternate" type="text/html" hreflang="fr" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ page.permalink | absolute_url }}</id>
+  <title type="html">{{ site.title }} | Advanced iOS Craft</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <author>
+    <name>{{ site.author }}</name>
+  </author>
+  {% assign entries = site.advanced-ios-craft | where:"beta","false" %}
+  {% for entry in entries %}
+    <entry>
+      <title type="html">{{ entry.title }}</title>
+      <link href="{{ entry.url | absolute_url }}" rel="alternate" type="text/html" title="{{ entry.title | escape_once }}" />
+      <published>{{ entry.date | date_to_xmlschema }}</published>
+      {% if entry.updated_at %}
+      <updated>{{ entry.updated_at | date_to_xmlschema }}</updated>
+      {% else %}
+      <updated>{{ entry.date | date_to_xmlschema }}</updated>
+      {% endif %}
+      <id>{{ entry.url | absolute_url }}</id>
+      <content type="html" xml:base="{{ entry.url | absolute_url }}">
+        {{ entry.description | escape_once }}
+      </content>
+      <author>
+        <name>{{ site.author }}</name>
+      </author>
+      <summary type="html">{{ entry.description | escape_once }}</summary>
+      {% if entry.image %}
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ entry.image | absolute_url }}" />
+      {% endif %}
+    </entry>
+  {% endfor %}
+</feed>
