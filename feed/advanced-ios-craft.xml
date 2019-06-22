@@ -13,28 +13,29 @@ permalink: /advanced-ios-craft/feed.xml
   <author>
     <name>{{ site.author }}</name>
   </author>
-  {% assign entries = site.advanced-ios-craft | where:"beta","false" %}
+  {%- assign entries = site.advanced-ios-craft | where:"beta","false" -%}
   {% for entry in entries %}
     <entry>
       <title type="html">{{ entry.title }}</title>
       <link href="{{ entry.url | absolute_url }}" rel="alternate" type="text/html" title="{{ entry.title | escape_once }}" />
       <published>{{ entry.date | date_to_xmlschema }}</published>
-      {% if entry.updated_at %}
+      {%- if entry.updated_at -%}
       <updated>{{ entry.updated_at | date_to_xmlschema }}</updated>
-      {% else %}
+      {%- else -%}
       <updated>{{ entry.date | date_to_xmlschema }}</updated>
-      {% endif %}
+      {%- endif -%}
       <id>{{ entry.url | absolute_url }}</id>
       <content type="html" xml:base="{{ entry.url | absolute_url }}">
-        {{ entry.content | escape_once }}
+        {{- entry.excerpt | escape_once -}}
+        &lt;p&gt;&lt;a href="{{ entry.url | absolute_url }}" title="{{ entry.title | escape_once }}"&gt;Lire la suite...&lt;/a&gt;&lt;/p&gt;
       </content>
       <author>
         <name>{{ site.author }}</name>
       </author>
       <summary type="html">{{ entry.description | escape_once }}</summary>
-      {% if entry.image %}
+      {%- if entry.image -%}
         <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ entry.image | absolute_url }}" />
-      {% endif %}
+      {%- endif -%}
     </entry>
-  {% endfor %}
+  {%- endfor -%}
 </feed>

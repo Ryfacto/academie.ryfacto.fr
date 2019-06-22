@@ -1,5 +1,6 @@
 ---
 layout: article
+excerpt_separator: <!--more-->
 image: /images/2019/06/architecture.jpg
 title: La seule architecture qui compte
 description: Que veut dire "architecture" quand on parle d'un logiciel ? Quelles sont les caractéristiques d'une bonne architecture ?
@@ -25,6 +26,8 @@ Vaste sujet qui me préoccupe depuis que j'ai commencé à créer des apps iOS e
 Après tout, c'est un choix important, non ? Une fois l'architecture choisie, impossible de revenir en arrière, n'est-ce pas ?
 
 Mais dites-moi, c'est quoi _une architecture_ ?
+
+<!--more-->
 
 ## Architecture : définition
 
