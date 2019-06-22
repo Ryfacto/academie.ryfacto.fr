@@ -1,6 +1,5 @@
 ---
 layout: landing
-permalink: /advanced-ios-craft/index
 title: Advanced iOS Craft
 ---
 
