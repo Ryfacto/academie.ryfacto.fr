@@ -1,6 +1,7 @@
 ---
 layout: landing
 title: Advanced iOS Craft
+id: advanced-ios-craft-landing
 ---
 
 Dans cette série, je t'apprends __tout ce que je sais__ pour __créer une architecture émergente en Swift__.
