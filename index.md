@@ -17,9 +17,7 @@ Pour éviter l'over-engineering au début, mais ne pas être pénalisé par l'un
 
 Bonne nouvelle : ça s'apprend, c'est passionnant et ça marche !
 
-## Advanced iOS Craft
-
-[Viens découvrir cette série ici.](/advanced-ios-craft)
+{%- include series.html -%}
 
 ## Mais au fait, qui suis-je ?
 
