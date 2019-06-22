@@ -8,7 +8,7 @@ layout: default
       <img src="{{ page.image | relative_url }}" alt="{{ page.image }}" />
     {% endif %}
     <h1 class="post-title">{{ page.title | escape }}</h1>
-    <p>Publié le <em>{{ page.date | date: "%d/%m/%Y" }}</em></p>
+    <p>Publié le <em>{{ page.date | date: "%d/%m/%Y" }}</em></p>
   </header>
 
   <div class="post-content">
@@ -18,7 +18,7 @@ layout: default
   {%- include newsletter_signup.html -%}
 
   <p class="chapter-value">
-    J'ai écrit cet article pendant <strong>{{ page.writing_time }}h</strong> et j'ai eu <strong>{{ page.ahah }} <em>"ah-ah moment"</em></strong> sous la douche ou en pleine nuit. Pour m'aider, partagez-le avec un(e) ami(e) ou sur les réseaux sociaux !
+    J'ai écrit cet article pendant <strong>{{ page.writing_time }}h</strong> et j'ai eu <strong>{{ page.ahah }} <em>"ah-ah moment"</em></strong> sous la douche ou en pleine nuit. Pour m'aider, partage-le avec un(e) ami(e) ou sur les réseaux sociaux !
   </p>
 
   <aside class="social-sharing">

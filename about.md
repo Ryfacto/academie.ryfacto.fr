@@ -10,7 +10,7 @@ permalink: /a-propos/
 
 ## Bonjour, je m'appelle Nicolas Verinaud
 
-<h3>L'objectif de ce site est de faire passer l'architecture de votre app iOS <em>au niveau supérieur</em></h3>
+<h3>L'objectif de ce site est de faire passer l'architecture de ton app iOS <em>au niveau supérieur</em></h3>
 
 <p class="clear space-top-1"></p>
 
@@ -30,11 +30,11 @@ J'en ai eu assez de devoir __réécrire de zéro tous les deux ans__.
 
 Alors je me suis mis au __code de qualité__.
 
-Et je __partage__ ici ce que je sais avec vous !
+Et je __partage__ ici ce que je sais avec toi !
 
 Je suis devenu un véritable __maniaque de la livraison continue__.
 
-Si vous voulez connaître toute l'histoire, je raconte tout [dans cette vidéo](https://youtu.be/NwL3N5vV-qw).
+Si tu veux connaître toute l'histoire, je raconte tout [dans cette vidéo](https://youtu.be/NwL3N5vV-qw).
 
 Sinon, quand je ne suis pas en train de courir dans la roue Red-Green-Refactor, je joue avec mon petit garçon _Thomas_ ou à Zelda avec ma femme _Marie_.
 
@@ -60,6 +60,6 @@ Si on est samedi matin, je suis sûrement en train de cuisiner pour la semaine (
 
 # M'embaucher
 
-J'ai fondé ma société [Ryfacto](https://www.ryfacto.fr) qui propose de la création de logiciels & de l'accompagnement sur-mesure.
+J'ai fondé ma société [Ryfacto](https://www.ryfacto.fr) qui propose de la création de logiciels & de l'accompagnement sur mesure.
 
-Je peux vous aider, vous et vos équipes, à __retrouver productivité, créativité et amour du travail bien fait__. [Contactez moi !](mailto:{{ site.author_email }})
+Je peux t'aider, toi et ton équipe, à __retrouver productivité, créativité et amour du travail bien fait__. [Contactez moi !](mailto:{{ site.author_email }})

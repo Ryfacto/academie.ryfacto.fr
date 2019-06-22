@@ -4,7 +4,7 @@ title: Conditions Générales d'Utilisation & Mentions Légales
 permalink: /cgu/
 ---
 
-Vous avez le droit de reproduire tout ou partie du contenu présent sur ce site librement
+Tu as le droit de reproduire tout ou partie du contenu présent sur ce site librement
 en respectant la license suivante :
 
 <p>
@@ -13,12 +13,12 @@ en respectant la license suivante :
 
 ### Attribution via canonical_url
 
-Si vous choisissez de reproduire du contenu, merci de bien préciser la source du contenu
+Si tu choisis de reproduire du contenu, merci de bien préciser la source du contenu
 via la [consolidation de duplication d'URLs](https://support.google.com/webmasters/answer/139066?hl=en).
 
-Je me donne du mal pour écrire ce contenu, et je vous l'offre __gratuitement__.
+Je me donne du mal pour écrire ce contenu, et je te l'offre __gratuitement__.
 
-Je suis très heureux quand vous le partagez ou le reproduisez, et si vous voulez me soutenir, aidez les moteurs de recherche à retrouver le contenu original ! __Merci !__
+Je suis très heureux quand tu le partages ou le reproduis, et si tu veux me soutenir, aide les moteurs de recherche à retrouver le contenu original ! __Merci !__
 
 ## Mentions Légales
 

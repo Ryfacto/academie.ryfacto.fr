@@ -5,7 +5,7 @@ id: home
 
 <div></div>
 
-<h1 class="headline">Faites passer l'architecture de votre app iOS<br /><em>au niveau supérieur !</em></h1>
+<h1 class="headline">Fais passer l'architecture de ton app iOS<br /><em>au niveau supérieur !</em></h1>
 
 Ce n'est pas facile de choisir la bonne architecture pour son app.
 
@@ -17,19 +17,9 @@ Pour éviter l'over-engineering au début, mais ne pas être pénalisé par l'un
 
 Bonne nouvelle : ça s'apprend, c'est passionnant et ça marche !
 
-## Série "Advanced iOS Craft"
+## Advanced iOS Craft
 
-Dans cette série, je vous apprends __tout ce que je sais__ pour __créer une architecture émergente en Swift__.
-
-Nous parlerons des __valeurs fondatrices__ qui guident ma manière de concevoir mon code.
-
-Nous verrons ensuite (dans le premier article intitulé __"TDD & les idées reçues sur le développement"__), que produire du code de qualité ne prends pas plus de temps. Au contraire, cela va vous rendre __plus efficace !__
-
-Nous apprendrons à créer un code 100% testable, __même la logique de navigation !__
-
-Ne passez pas à côté en vous __inscrivant à la newsletter !__
-
-{%- include newsletter_signup.html -%}
+[Viens découvrir cette série ici.](/advanced-ios-craft)
 
 ## Mais au fait, qui suis-je ?
 
