@@ -11,10 +11,10 @@ beta: false
 writing_time: 3
 ahah: 1
 comments:
-    #- author: nverinaud
-      #author_url: "twitter.com/nverinaud"
-      #avatar: ""
-      #body: "<p>Exemple de commentaire</p>"
+    - author: Thibaut
+      author_url: "https://twitter.com/ThibautSchmidt"
+      avatar: "https://www.gravatar.com/avatar/37803293d4f04796cc6a5e952310f3f3"
+      body: "<p>Salut, bravo pour ton premier article, je l'ai trouvé vraiment sympa !</p><p>Je trouve qu'il donne des bases simples. Ces bases qui peuvent souvent être oubliées quand on utilise bêtement un framework (genre Symfony) qui fait plein de choses dont on a pas besoin. Du coup ton article parait un peu comme un &quot;retour aux sources&quot;. 😂</p>"
 ---
 
 Ah, l'architecture d'une app iOS.
