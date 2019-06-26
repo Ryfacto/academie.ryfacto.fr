@@ -5,7 +5,7 @@ permalink: /a-propos/
 ---
 
 <p class="about">
-  <img class="left" src="/images/2019/05/Photo-metropolis-rounded.jpg" alt="photo-de-nicolas-verinaud" />
+  <img class="left" src="{{ site.author_gravatar }}" alt="photo-de-nicolas-verinaud" />
 </p>
 
 ## Bonjour, je m'appelle Nicolas Verinaud
