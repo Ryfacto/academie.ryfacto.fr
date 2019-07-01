@@ -162,6 +162,15 @@ blockquote {
   padding: 0 15px;
 }
 
+.post-content {
+
+  img {
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+  }
+}
+
 .page-content {
   padding: 15px 0;
 }
