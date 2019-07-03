@@ -264,7 +264,7 @@ Ces deux codes sources nous offrent un niveau d'information important, le code d
 
 Cet aspect __documentation__ est _PRIMORDIAL_.
 
-Deuxièmenent, les tests doivent être __FIRST__ :
+Deuxièmement, les tests doivent être __FIRST__ :
 - __Fast__ : les tests (ou une partie) s'exécutent très rapidement (c'est assez subjectif mais pour moi par exemple il faut que ce soit inférieur à 10 secondes) ; et cela car nous les exécutons tout le temps (plusieurs fois par minutes),
 - __Independant__ : aucun test ne dépend de l'exécution d'un autre test, cela veut dire que nous pouvons exécuter chaque test dans n'importe quel ordre,
 - __Repeatable__ : chaque exécution donne le même résultat, peu importe quand et où (sur la machine de dev, sur la CI, etc.) l'exécution a lieue,
