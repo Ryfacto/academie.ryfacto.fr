@@ -18,7 +18,8 @@ Ne passe pas à côté en __t'inscrivant à la newsletter !__
 
 {%- if site.advanced-ios-craft.size > 0 -%}
   <ul class="post-list">
-    {%- for post in site.advanced-ios-craft -%}
+    {%- assign posts = site.advanced-ios-craft | where:"beta","false" -%}
+    {%- for post in posts -%}
     <li>
       <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
       <h3>
