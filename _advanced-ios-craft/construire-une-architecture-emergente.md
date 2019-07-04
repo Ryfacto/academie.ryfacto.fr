@@ -8,7 +8,7 @@ date: 03/07/2019
 updated_at: 03/07/2019
 published: true
 beta: true
-writing_time: 6
+writing_time: 7
 ahah: 3
 custom_call_to_action_form: construire_une_architecture_emergente_download_pdf.html
 comments:
