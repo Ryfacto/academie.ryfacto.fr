@@ -94,7 +94,7 @@ Attendre que l'équipe de test (parfois appelée QA pour Quality Assurance) ait 
 
 J'ai discuté avec un lead dev un jour qui me disait mettre à contribution toute l'entreprise pour une _"journée de test"_. Tout le monde devait mettre la main à la pâte afin de vérifier que l'app fonctionnait toujours correctement. Ils faisaient cela en déroulant un plan de test qui se trouvait dans un spreadsheet. J'imagine juste le coût d'une telle pratique : immobiliser tous les services de l'entreprise (compta, com, vente, service client, etc) pendant toute une journée pour tester !
 
-### Les utilistrices et utilisateurs finaux testent
+### Les utilisatrices et utilisateurs finaux testent
 
 Cette option présente l'avantage de la deuxième, à savoir réduire le temps de test. Autre avantage : on n'a pas besoin de payer nos utilisateurs et utilisatrices pour faire les tests.
 
@@ -337,7 +337,7 @@ La première étape consiste à prendre conscience du temps passé dans les troi
 
 Je t'invite donc, aujourd'hui ou demain, à noter le temps que tu passes dans ces trois activités.
 
-TDD ne s'apprends pas en un jour et demande beaucoup de pratique. Mon conseil est d'y aller par petites étapes.
+TDD ne s'apprend pas en un jour et demande beaucoup de pratique. Mon conseil est d'y aller par petites étapes.
 
 La première que je te propose est de faire un [kata de code](http://kata-log.rocks/fizz-buzz-kata) en TDD afin d'avoir une première expérience de la pratique.
 
