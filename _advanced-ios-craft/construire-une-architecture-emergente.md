@@ -18,13 +18,21 @@ Dans [l'article précédent](la-seule-architecture-qui-compte), je te parlais de
 
 Pour y arriver, il faut manipuler son code comme de la __pâte à modeler__ ; car avoir une conception qui tape dans le mille du premier coup est proche de l'impossible.
 
-Qui dit manipuler son code dit potentiellement introduire des _bugs_, casser des choses.
+Et puis de toute façon, c'est un fait, __le besoin change !__
 
-Pour s'en prémunir il n'y a pas 36 solutions, __il faut tester__.
+Pour répondre à ces nouveaux besoins, il faut modifier le code.
+
+Qui dit le modifier dit potentiellement introduire des _bugs_, casser des choses.
+
+Et là, forcément, la peur te gagne. Comment limiter ce risque ? Comment éviter de casser, de créer des bugs ?
+
+Je ne vais pas te le cacher, il n'y a pas 36 solutions, il faut...__tester !__
 
 Dans cet article, je vais parler de plusieurs _stratégies_ pour à la fois prévenir l'apparition de bugs mais aussi permettre de faire émerger une architecture saine et évolutive.
 
-En somme, l'objectif est toujours d'avoir la conception la plus optimale possible pour répondre au besoin présent ; sans sur-ingénierie (pas de code "au cas où") et sans sous-ingénierie (pas de duplication partout).
+Pour ne plus avoir peur de casser des choses en modifiant le code.
+
+L'objectif est toujours d'avoir la conception la plus optimale possible pour répondre au besoin présent ; sans sur-ingénierie (pas de code "au cas où") et sans sous-ingénierie (pas de duplication partout).
 
 __Une conception aux petits oignons pour apporter de la valeur MAINTENANT.__
 
@@ -382,11 +390,3 @@ Le prochain article sera consacré à un exemple de TDD en Swift sur le kata de 
 Je monterai ensuite en puissance en créant une app iOS entièrement en TDD dans une série d'articles où je détaillerai pas à pas la manière de procéder pour faire émerger l'architecture.
 
 [Inscris-toi à la newsletter pour ne pas les rater !](signup)
-
-## Résumé
-
-Cet article était particulièrement long, bravo d'être arrivé au bout !
-
-Pour te féliciter, je te propose de télécharger un résumé PDF de celui-ci.
-
-Pour cela rien de plus simple, remplis le formulaire ci-dessous et je te l'enverrai par e-mail ! 😉
