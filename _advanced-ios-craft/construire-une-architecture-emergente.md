@@ -244,7 +244,7 @@ Ou bien je peux l'exécuter pour comprendre pourquoi elle ne marche pas comme je
 
 > Tout ça est intéressant mais où veux-tu en venir Nico ?
 
-Je ne vais pas passer par quatre chemins, __TDD permets de gagner du temps et d'être plus productif__.
+Je ne vais pas passer par quatre chemins, __TDD permet de gagner du temps et d'être plus productif__.
 
 > Écrire les tests en premier c'est ça ?
 
@@ -252,9 +252,9 @@ Oui, entre autre, ça veut dire Test Driven Development ou Le Développement Pil
 
 ### TDD
 
-C'est une pratique inventé par [Kent Beck](https://fr.wikipedia.org/wiki/Kent_Beck).
+C'est une pratique inventée par [Kent Beck](https://fr.wikipedia.org/wiki/Kent_Beck).
 
-Plus qu'une simple pratique, c'est une véritable __discipline__ qui nécessite de la rigeur pour être mise en œuvre efficacement.
+Plus qu'une simple pratique, c'est une véritable __discipline__ qui nécessite de la rigueur pour être mise en œuvre efficacement.
 
 Pour clarifier pour la suite de l'article, j'aimerais que nous nous mettions d'accord sur deux points concernant TDD.
 
@@ -265,9 +265,9 @@ Ces deux codes sources nous offrent un niveau d'information important, le code d
 Cet aspect __documentation__ est _PRIMORDIAL_.
 
 Deuxièmement, les tests doivent être __FIRST__ :
-- __Fast__ : les tests (ou une partie) s'exécutent très rapidement (c'est assez subjectif mais pour moi par exemple il faut que ce soit inférieur à 10 secondes) ; et cela car nous les exécutons tout le temps (plusieurs fois par minutes),
+- __Fast__ : les tests (ou une partie) s'exécutent très rapidement (c'est assez subjectif mais pour moi par exemple il faut que ce soit inférieur à 10 secondes) ; et cela car nous les exécutons tout le temps (plusieurs fois par minute),
 - __Independant__ : aucun test ne dépend de l'exécution d'un autre test, cela veut dire que nous pouvons exécuter chaque test dans n'importe quel ordre,
-- __Repeatable__ : chaque exécution donne le même résultat, peu importe quand et où (sur la machine de dev, sur la CI, etc.) l'exécution a lieue,
+- __Repeatable__ : chaque exécution donne le même résultat, peu importe quand et où (sur la machine de dev, sur la CI, etc.) l'exécution a lieu,
 - __Self-checking__ : le test détecte tout seul s'il passe ou non (nous n'avons pas besoin d'interpréter un rapport de test ou un log),
 - __Timely__ : le test est écrit en même temps que le code de production (avec TDD, le test est même écrit avant !).
 
@@ -283,13 +283,13 @@ Comme nous l'avons vu, développer n'est pas qu'une seule activité finalement.
 
 Bien entendu, ces activités s'enchaînent et s'imbriquent tout au long de la journée ; c'est pourquoi nous pensons, à priori, qu'elles ne forment qu'un bloc. En réalité, elles prennent des proportions différentes durant une journée de développement.
 
-__Écrire le code__, l'activité la plus intéressante, __est l'activité qui prends le moins de temps__ de la journée.
+__Écrire le code__, l'activité la plus intéressante, __est l'activité qui prend le moins de temps__ de la journée.
 
-__Exécuter le code__, ce qui veut dire la plupart du temps : attendre que l'app se lance, naviguer au sein des écrans, remplir des données afin d'arriver à l'endroit que nous souhaitons voir ; __est l'activité qui prends le plus de temps__, et de loin !
+__Exécuter le code__, ce qui veut dire la plupart du temps : attendre que l'app se lance, naviguer au sein des écrans, remplir des données afin d'arriver à l'endroit que nous souhaitons voir ; __est l'activité qui prend le plus de temps__, et de loin !
 
 __L'étude du code__, le lire, le comprendre, __se situe au milieu__.
 
-Quand je dis que TDD permets de gagner du temps et d'être plus productif, l'idée reçue à ce sujet, à savoir _"automatiser les tests est plus long que de ne pas le faire"_, est à la fois juste et faux.
+Quand je dis que TDD permet de gagner du temps et d'être plus productif, l'idée reçue à ce sujet, à savoir _"automatiser les tests est plus long que de ne pas le faire"_, est à la fois juste et faux.
 
 Voici une image schématisant les trois activités avant TDD.
 
@@ -321,9 +321,9 @@ Et bien, cela est lié à l'environnement d'exécution des tests. Cet environnem
 
 Plus précisément, les tests n'ont pas besoin d'attendre la réponse d'un webservice ou d'une base de données. Ils n'ont pas besoin de faire des accès fichiers, d'attendre que l'UI se charge, que le Bluetooth se connecte, que la géolocalisation soit trouvée.
 
-Les tests sont construits de manière à être petit et rapide.
+Les tests sont construits de manière à être petits et rapides.
 
-Rien ne permet, aujourd'hui, d'éliminer totalement le temps passé à exécuter le code, mais TDD permets de réduire ce temps de manière très significative.
+Rien ne permet, aujourd'hui, d'éliminer totalement le temps passé à exécuter le code, mais TDD permet de réduire ce temps de manière très significative.
 
 ![Before and After TDD](images/before-and-after-tdd.jpg)
 
@@ -369,9 +369,9 @@ __Une seule solution__, à mon sens, permet d'avoir ce feedback rapide tout en m
 
 Je vais __pousser les tests automatisés avec TDD au maximum__ car ils me permettent d'être très __efficace__ et me donne __un haut niveau de confiance__ face aux bugs et regressions.
 
-Je vais aussi __utiliser intensément le système de type__ pour que le compilateur m'affranchisse d'écrire des tests et que la sémantique de mon code respecte au maximum le besoin métier. Cela améliore la clareté du code, sa lisibilité, et permet ainsi __une étude du code plus efficace__ par un autre être humain (ou mon futur moi).
+Je vais aussi __utiliser intensément le système de type__ pour que le compilateur m'affranchisse d'écrire des tests et que la sémantique de mon code respecte au maximum le besoin métier. Cela améliore la clarté du code, sa lisibilité, et permet ainsi __une étude du code plus efficace__ par un autre être humain (ou mon futur moi).
 
-Et enfin, je __continue à faire des tests manuels à petite dose__ pour les parties que je ne veux pas, ou ne peux pas, tester automatiquement comme par exemple un affichage correcte sur différentes tailles d'écrans, la gestion de taille de police dynamique, l'utilisation en conditions réelles de capteurs comme le GPS ou le Bluetooth.
+Et enfin, je __continue à faire des tests manuels à petite dose__ pour les parties que je ne veux pas, ou ne peux pas, tester automatiquement comme par exemple un affichage correct sur différentes tailles d'écrans, la gestion de taille de police dynamique, l'utilisation en conditions réelles de capteurs comme le GPS ou le Bluetooth.
 
 Je fais aussi appel à des testeurs et testeuses externes afin d'avoir un regard neuf sur l'app (car c'est difficile pour moi de tester ma propre création, j'ai tendance à lui faire des fleurs ❤️).
 
