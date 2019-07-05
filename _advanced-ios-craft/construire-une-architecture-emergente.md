@@ -108,7 +108,7 @@ Cette option présente l'avantage de la deuxième, à savoir réduire le temps d
 
 Par contre, je pense que tu l'as deviné, il y a un inconvénient majeur : ce sont les utilisateurs et utilisatrices finaux qui vont trouver les problèmes, ce qui va générer de la frustration et avoir un impact négatif sur la qualité perçue de l'app avec très probablement une mauvaise note sur l'App Store.
 
-Je ne l'ai pas encore évoqué mais toutes ces options présentent un inconvénient majeur : les tests ne sont pas fiables. Et cela car le facteur humain conduit forcément à des erreurs. Il se peut très bien que tu ais oublié de tester un cas de figure. Il se peut aussi que tu n'as pas retesté ce qui pour toi est censé continuer à marcher.
+Je ne l'ai pas encore évoqué mais toutes ces options présentent un inconvénient majeur : les tests ne sont pas fiables. Et cela, car le facteur humain conduit forcément à des erreurs. Il se peut très bien que tu ais oublié de tester un cas de figure. Il se peut aussi que tu n'as pas retesté ce qui pour toi est censé continuer à marcher.
 
 Résultat des courses, non seulement les tests manuels sont longs et coûteux, mais en plus, ils ne sont pas d'une grande fiabilité !
 
