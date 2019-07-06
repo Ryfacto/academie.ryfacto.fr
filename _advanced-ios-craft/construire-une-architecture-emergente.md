@@ -4,8 +4,8 @@ excerpt_separator: <!--more-->
 image: /images/2019/06/growth.jpg
 title: Construire une architecture émergente
 description: Faire émerger l'architecture c'est manipuler son code comme de la pâte à modeler. Pour ne rien casser, il faut tester. Je partage avec toi dans cet article mes trois stratégies de tests.
-date: 06/07/2019
-updated_at: 06/07/2019
+date: 08/07/2019
+updated_at: 08/07/2019
 published: true
 beta: true
 writing_time: 7
