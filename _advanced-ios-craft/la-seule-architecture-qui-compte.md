@@ -176,4 +176,4 @@ Pour cela, nous devons nous assurer que nous ne cassons rien au passage.
 
 _Et pour ne rien casser...on fait comment ?_
 
-Je vous en parle dans le prochain article. 😉
+Je vous en parle dans [le prochain article](construire-une-architecture-emergente). 😉
