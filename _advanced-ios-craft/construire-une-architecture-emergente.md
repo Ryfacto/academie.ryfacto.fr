@@ -7,7 +7,7 @@ description: Faire émerger l'architecture c'est manipuler son code comme de la 
 date: 08/07/2019
 updated_at: 08/07/2019
 published: true
-beta: true
+beta: false
 writing_time: 7
 ahah: 3
 custom_call_to_action_form: construire_une_architecture_emergente_download_pdf.html
