@@ -11,6 +11,12 @@ layout: default
     <p>Publié le <em>{{ page.date | date: "%d/%m/%Y" }}</em></p>
   </header>
 
+  {% if page.technical_environment %}
+    <div class="post-technical-environment">
+      <p><strong>Versions</strong> : Swift {{ page.technical_environment.swift }}, Xcode {{ page.technical_environment.xcode }}</p>
+    </div>
+  {% endif %}
+
   <div class="post-content">
     {{ content }}
   </div>

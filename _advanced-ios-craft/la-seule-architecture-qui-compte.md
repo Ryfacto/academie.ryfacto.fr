@@ -1,6 +1,5 @@
 ---
 layout: article
-excerpt_separator: <!--more-->
 image: /images/2019/06/architecture.jpg
 title: La seule architecture qui compte
 description: Que veut dire "architecture" quand on parle d'un logiciel ? Quelles sont les caractéristiques d'une bonne architecture ?

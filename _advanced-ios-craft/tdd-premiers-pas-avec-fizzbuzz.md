@@ -1,15 +1,17 @@
 ---
 layout: article
-excerpt_separator: <!--more-->
 image:
 title: Test-Driven Development - Premiers pas avec FizzBuzz
-description:
+description: aa
 date: 13/07/2019
 updated_at: 13/07/2019
 published: false
 beta: true
 writing_time: 1
 ahah: 1
+technical_environment:
+  swift: 5
+  xcode: 10.2.1
 comments:
 ---
 
@@ -35,13 +37,13 @@ FizzBuzz
 Première étape : je conçois
   Phase de conception que l'on peut faire : dans sa tête ou sur un tableau blanc à plusieurs.
   UML communément admis dans l'industrie, donc un bon moyen de communiquer sa conception.
-  Voici ce que j'ai imaginé : <photo du tableau blanc>
+  Voici ce que j'ai imaginé : `<photo du tableau blanc>`
 
 Deuxième étape : je liste tous les tests qui me viennent en tête
   J'ai pour habitude d'écrire cette liste en commentaire dans le code.
   Ça peut être fait sur un fichier à côté, sur le tableau blanc, on s'en fiche.
   Le plus important est d'avoir cette liste sous les yeux, tu vas la mettre à jour continuellement quand d'autres tests te viendras en tête ou quand tu auras fini d'écrire des tests.
-  Voici ma liste en vrac pour l'instant : <liste ici>
+  Voici ma liste en vrac pour l'instant : `<liste ici>`
 
 Troisième étape : je priorise la liste
   > Mais je croyais qu'il fallait écrire un test rouge, toujours pas ?
@@ -50,7 +52,7 @@ Troisième étape : je priorise la liste
   Qui a dit que TDD voulait dire foncer tête baisser sans concevoir ?
   Tu vas commencer par écrire les tests qui te font écrire le moins de code : les tests les plus simple.
   Tu priorises aussi en commençant par les cas à la marge : valeurs nil, string vide, liste vide, nombre 0, nombre négatif, etc.
-  Voici ma liste priorisée et l'explication des priorités : <liste ici avec commentaires sur pourquoi>
+  Voici ma liste priorisée et l'explication des priorités : `<liste ici avec commentaires sur pourquoi>`
 
 Quatrième étape : le premier test rouge
   > Enfin !
@@ -76,4 +78,10 @@ Sixième étape (mon étape préféré) : refactoring !
   Non, désolé...
   Quelles crimes de conception ai-je commis ici ?
   - Type dispo que dans les tests
-  Je bouge donc ce type dans
+  Je bouge donc ce type dans un fichier dédié dans le code de prod. `FizzBuzz.swift`
+
+Septième étape : je mets à jour la liste
+  `<liste mise à jour>`
+
+Et le cycle recommence !
+  Prochain test : FizzBuzz avec

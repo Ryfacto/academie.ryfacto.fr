@@ -34,6 +34,7 @@ defaults:
           path: /images/logo.jpg
           width: 300
           height: 89
+        excerpt_separator: <!--more-->
 collections:
   advanced-ios-craft:
     output: true
