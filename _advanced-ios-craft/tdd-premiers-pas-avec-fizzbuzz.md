@@ -11,6 +11,7 @@ writing_time: 1
 ahah: 1
 technical_environment:
   swift: 5
+  ios: 12.2
   xcode: 10.2.1
 comments:
 ---
@@ -84,4 +85,28 @@ Septième étape : je mets à jour la liste
   `<liste mise à jour>`
 
 Et le cycle recommence !
-  Prochain test : FizzBuzz avec
+  Prochain test : FizzBuzz avec 0
+    `let result = fizzBuzz.upTo(0)`
+    Une erreur de compilation == un test qui échoue, je m'arrête !
+    J'implémente la méthode pour faire compiler avec fatalError.
+    Assertion sur la liste de string.
+    Je lance les tests : ils échouent évidemment. Quelle tristesse ! Non, un test qui échoue c'est progresser !
+    Je fais passer le test le plus vite possible en retournant une liste vide.
+    Refactoring : quels crimes ai-je commis ?
+      Duplication dans les tests : deux tests sur la création.
+        Je supprime le premier test.
+
+  FizzBuzz avec -1
+    Le système de type à la rescousse !
+    La méthode `upTo` prends en argument un `UInt` plutôt qu'un `Int`.
+    Je m'épargne un test !
+
+  FizzBuzz avec 1
+    Nouveau test avec assertions equal `[ "1" ]`
+    On retourne en dure `[ "1" ]`
+    Oups j'ai cassé le premier test.
+    Je reviens en arrière.
+    Le deuxième échoue comme avant.
+    Je dois réflechir...
+    J'implémente avec un if
+    `if i == 0 { return [] }; return [ "1" ]`
