@@ -110,3 +110,6 @@ Et le cycle recommence !
     Je dois réflechir...
     J'implémente avec un if
     `if i == 0 { return [] }; return [ "1" ]`
+    Refactoring !
+      Duplication dans les valeurs : je dois généraliser en utilisant les paramètres.
+      "1" devient i

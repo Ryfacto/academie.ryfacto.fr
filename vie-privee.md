@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Nous respectons votre vie privée
+title: Je respecte ta vie privée
 ---
 
 > C'est ça, mon œil !
