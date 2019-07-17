@@ -81,51 +81,150 @@ J'insiste bien sur le terme __comportement__.
 
 En d'autres termes, quels sont les tests à écrire pour spécifier ces comportements ?
 
-Je t'invite à faire l'exercice de ton côté. Liste tous les tests (comportements !) pour `FizzBuzz`.
+_Je t'invite à faire l'exercice de ton côté. Liste tous les tests (comportements !) pour `FizzBuzz`._
 
 ...
 
 ...
 
+...
 
 C'est bon ?
 
 Voici ma liste :
 
-{% highlight swift %}
-// upTo 100 -> [1, 2, Fizz, 4, Buzz, Fizz, ... ]
-// creation
-// upTo 0 -> []
-// upTo -1 -> []
-// upTo 3 -> last Fizz
-// upTo 5 -> last Buzz
-// upTo 15 -> last FizzBuzz
-{% endhighlight %}
+<table>
+  <tr><td>100 -> [1, 2, Fizz, 4, Buzz, Fizz, ... ]</td></tr>
+  <tr><td>creation</td></tr>
+  <tr><td>3 -> [1, 2, Fizz]</td></tr>
+  <tr><td>5 -> last == Buzz</td></tr>
+  <tr><td>15 -> last == FizzBuzz</td></tr>
+  <tr><td>0 -> []</td></tr>
+  <tr><td>-1 -> []</td></tr>
+  <tr><td>1 -> [1]</td></tr>
+</table>
 
 J'ai pour habitude d'écrire cette liste en commentaire dans le code de la classe de test que je suis en train d'écrire.
 
-Le plus important est d'avoir 
+Le plus important est d'avoir cette liste sous les yeux car nous allons la mettre à jour continuellement quand d'autres tests nous viendront en tête ou quand nous aurons fini d'écrire un test.
 
-## Étape 3 : je conçois
+## Étape 2 : dans quel ordre j'écris les tests ?
+
+J'utilise un algorithme simple pour déterminer l'ordre de priorité.
+
+1. Quel test me fera écrire le moins de code ? Autrement dit, quel est le test le plus simple à faire passer ?
+2. Ai-je des cas à la marge à gérer ? Exemple : string vide, valeurs nil, liste vide, etc.
+
+_À toi de jouer ! Priorise ta liste._
+
+...
+
+...
+
+...
+
+Job done ?
+
+Moi oui ! Voici ma liste priorisée avec quelques explications :
+
+<table>
+  <thead><tr><th>Test</th><th>Pourquoi ?</th></tr></thead>
+  <tr><td>creation</td><td>Me poussera à simplement créer le type.</td></tr>
+  <tr><td>0 -> []</td><td>Cas à la marge</td></tr>
+  <tr><td>-1 -> []</td><td>Cas à la marge</td></tr>
+  <tr><td>1 -> [1]</td><td>Cas simple : afficher le numéro sous forme de string</td></tr>
+  <tr><td>3 -> [1, 2, Fizz]</td><td>Première règle métier</td></tr>
+  <tr><td>5 -> last == Buzz</td><td>Deuxième règle métier</td></tr>
+  <tr><td>15 -> last == FizzBuzz</td><td>Troisième règle métier</td></tr>
+  <tr><td>100 -> [1, 2, Fizz, 4, Buzz, Fizz, ... ]</td><td>Test d'acceptance</td></tr>
+</table>
+
+## Étape 3 : un peu de conception
+
+Qui a dit que TDD voulait dire foncer tête baissée sans concevoir ?
+
+Cette phase est très importante.
+
+J'imagine l'API (Application Programming Interface) la plus simple possible qui me permettra d'écrire les premiers tests.
+
+Je peux faire cette exercice dans ma tête ou sur tableau blanc.
+
+Je peux en discuter avec mon pair si je travaille en pair programming.
+
+_Je t'invite à concevoir cette API avant de continuer ta lecture._
+
+...
+
+...
+
+...
+
+Voici ce que j'ai imaginé, sur tableau blanc en utilisant un peu d'UML.
+
+![UML FizzBuzz](tdd-intro-resources/images/1-uml.jpg)
+
+## Étape 4 : le premier test rouge
+
+> Enfin !
+
+Le suspens était à son comble mais nous y sommes !
+
+L'écriture du premier test rouge !
+
+### 1er test : le test marche-pied de "création"
+
+Si ce n'est pas déjà fait, [télécharge le projet de départ](tdd-intro-resources/code/TDDFizzBuzz.zip).
+
+Afin de bien démarrer, supprime le fichier __TDDFizzBuzzTests.swift__ qui servait simplement à vérifier l'environnement.
+
+Crée ensuite un groupe __FizzBuzz__ dans le groupe __TDDFizzBuzz__.
+
+Crée ensuite le premier fichier de test __FizzBuzz_Spec.swift__ dans le groupe __FizzBuzz__ et veille bien à l'ajouter à la target __TDDFizzBuzzTests__.
+
+_(Pour je ne sais quelle raison, Xcode propose de créer un Bridging Header. Réponds "Don't create" et tout ira bien !)_
+
+Ensuite écris le code suivant dans __FizzBuzz_Spec.swift__ :
+
+{% highlight swift %}
+import XCTest
+@testable import TDDFizzBuzz
+
+class FizzBuzz_Spec: XCTestCase {
+
+}
+{% endhighlight %}
+
+Et enfin le premier test à l'intérieur de la classe __FizzBuzz_Spec__ :
+
+{% highlight swift %}
+func test_Creation() {
+  _ = FizzBuzz()
+}
+{% endhighlight %}
+
+> Ça ne compile même pas !
+
+Parfait ! Un code qui ne compile pas équivaut à un test qui échoue.
+
+C'est la phase __RED__ de TDD. J'écris d'abord un test qui échoue.
+
+Fais passer le test en créant une `struct` __FizzBuzz__ juste au-dessus de la classe de test dans le fichier __FizzBuzz_Spec.swift__.
+
+{% highlight swift %}
+struct FizzBuzz {
+
+}
+{% endhighlight %}
+
+Relance le test avec `⌘U`.
+
+Il passe ! C'est la phase __GREEN__ de TDD : je fais passer le test le plus vite possible.
+
+> Il est un peu inutile ce test non ?
+
+
 
 OUTLINE
-
-Étape 1 : je liste tous les tests qui me viennent en tête
-  J'ai pour habitude d'écrire cette liste en commentaire dans le code.
-  Ça peut être fait sur un fichier à côté, sur le tableau blanc, on s'en fiche.
-  Le plus important est d'avoir cette liste sous les yeux, tu vas la mettre à jour continuellement quand d'autres tests te viendras en tête ou quand tu auras fini d'écrire des tests.
-  Voici ma liste en vrac pour l'instant : `<liste ici>`
-
-Étape 2 : je priorise la liste
-  Qui a dit que TDD voulait dire foncer tête baisser sans concevoir ?
-  Tu vas commencer par écrire les tests qui te font écrire le moins de code : les tests les plus simple.
-  Tu priorises aussi en commençant par les cas à la marge : valeurs nil, string vide, liste vide, nombre 0, nombre négatif, etc.
-  Voici ma liste priorisée et l'explication des priorités : `<liste ici avec commentaires sur pourquoi>`
-
-Étape 3 : je conçois
-  Phase de conception que l'on peut faire : dans sa tête ou sur un tableau blanc à plusieurs.
-  UML communément admis dans l'industrie, donc un bon moyen de communiquer sa conception.
-  Voici ce que j'ai imaginé : `<photo du tableau blanc>`
 
 Quatrième étape : le premier test rouge
   > Enfin !
