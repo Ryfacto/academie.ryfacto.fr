@@ -139,6 +139,16 @@ Moi oui ! Voici ma liste priorisée avec quelques explications :
   <tr><td>100 -> [1, 2, Fizz, 4, Buzz, Fizz, ... ]</td><td>Test d'acceptance</td></tr>
 </table>
 
+> Pourquoi commencer par les tests les plus simples et ceux à la marge ?
+
+Très bonne question !
+
+Si je commence par les tests concernant les règles métiers, je risque de me retrouver bloquer.
+
+Je risque de devoir implémenter tout l'algo, ou une grosse partie, d'un coup !
+
+Dans un prochain article, je te montrerai un exemple qui illustre un blocage si on ne priorise pas correctement. Pour ne pas le rater, [inscris-toi à la newsletter !](signup)
+
 ## Étape 3 : un peu de conception
 
 Qui a dit que TDD voulait dire foncer tête baissée sans concevoir ?
@@ -163,7 +173,7 @@ Voici ce que j'ai imaginé, sur tableau blanc en utilisant un peu d'UML.
 
 ![UML FizzBuzz](tdd-intro-resources/images/1-uml.jpg)
 
-## Étape 4 : le premier test rouge
+## Étape 4 : le premier test rouge (RED)
 
 > Enfin !
 
@@ -171,7 +181,7 @@ Le suspens était à son comble mais nous y sommes !
 
 L'écriture du premier test rouge !
 
-### 1er test : le test marche-pied de "création"
+### Le test marche-pied de "création"
 
 Si ce n'est pas déjà fait, [télécharge le projet de départ](tdd-intro-resources/code/TDDFizzBuzz.zip).
 
@@ -208,6 +218,8 @@ Parfait ! Un code qui ne compile pas équivaut à un test qui échoue.
 
 C'est la phase __RED__ de TDD. J'écris d'abord un test qui échoue.
 
+## Étape 5 : je fais passer le test le plus vite possible (GREEN)
+
 Fais passer le test en créant une `struct` __FizzBuzz__ juste au-dessus de la classe de test dans le fichier __FizzBuzz_Spec.swift__.
 
 {% highlight swift %}
@@ -222,25 +234,41 @@ Il passe ! C'est la phase __GREEN__ de TDD : je fais passer le test le plus vite
 
 > Il est un peu inutile ce test non ?
 
+Il peut sembler inutile, il n'empêche qu'il m'a poussé à créer la `struct`, il m'a permis de mettre le pied à l'étrier.
+
+Il m'a permis...de progresser !
+
+C'est un test que l'on appelle "test marche-pied".
+
+En TDD, tu peux avancer par petites étapes, les anglophones parlent de "baby steps".
+
+Pour autant, ce n'est pas parce que tu peux le faire que tu vas toujours le faire.
+
+Il m'arrive de sauter ce test pour aller plus vite.
+
+Ce n'est pas "interdit" par la pratique de TDD.
+
+Mais je sais que si je le souhaite, je peux ralentir pour y aller plus progressivement.
+
+## Étape 6 (ma préférée) : j'améliore la structure ! (REFACTORING)
+
+Pose-toi la question suivante : _quelles crimes de conception as-tu commis ?_
+
+> Sur un code si simple, j'ai vraiment commis des crimes de conception ?
+
+Oui, un petit crime en réalité. 😉
+
+Je te laisse un petit temps de reflexion.
+
+...
+
+...
+
+...
+
 
 
 OUTLINE
-
-Quatrième étape : le premier test rouge
-  > Enfin !
-
-  1er test : création
-    - Suppression du test pour vérifier l'environnement
-    - Création du fichier de test au plus proche du code de prod
-  J'écris le plus petit test possible qui me fait écrire le plus petit bout de code possible.
-  Ici c'est un test "marche-pied" qui me permets de mettre simplement le pied à l'étrier et me forcer à créer la classe.
-  `<code du test marche-pied>`
-  Dans un prochain article, je montrerai un exemple de l'importance de fonctionner par petites étapes, de commencer par les tests les plus simples, au risque de se retrouver à écrire tout l'algo d'un coup si on ne le fait pas. Pour ne pas le rater, [inscris-toi à la newsletter !](signup)
-
-Cinquième étape : faire passer le test le plus vite possible
-  Enfin je fais passer le test le plus vite possible.
-  Je crée le type au même endroit que les tests.
-  `<code qui fait passer le test>`
 
 Sixième étape (mon étape préféré) : refactoring !
   D'où le nom Ryfacto pour ma petite boîte, aaaah !
