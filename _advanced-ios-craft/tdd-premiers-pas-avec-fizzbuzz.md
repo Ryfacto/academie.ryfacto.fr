@@ -13,7 +13,7 @@ technical_environment:
   swift: 5
   ios: 12.2
   xcode: 10.2.1
-  appcode: 2019.1
+  appcode: 2019.1.4
 comments:
 ---
 
@@ -625,3 +625,51 @@ private func assertThatFizzBuzz(upTo n: UInt, is expected: [String], line: UInt 
 Un petit run des tests pour vérifier qu'on n'a rien cassé au passage...
 
 ...et ça marche ! Merveilleux !
+
+### FizzBuzz "jusqu'à 2"
+
+Je viens de penser à un nouveau test.
+
+Un test qui nous obligera à boucler : FizzBuzz jusqu'à 2 !
+
+Je l'ajoute en haut de la liste :
+
+<table>
+  <tr><td>2 -> [1, 2]</td></tr>
+  <tr><td>3 -> [1, 2, Fizz]</td></tr>
+  <tr><td>5 -> last == Buzz</td></tr>
+  <tr><td>15 -> last == FizzBuzz</td></tr>
+  <tr><td>100 -> [1, 2, Fizz, 4, Buzz, Fizz, ... ]</td></tr>
+</table>
+
+Ajoute le test suivant :
+
+{% highlight swift %}
+func test_FizzBuzz_up_to_2_is_a_list_containing_1_and_2_as_string() {
+  assertThatFizzBuzz(upTo: 2, is: [ "1", "2" ])
+}
+{% endhighlight %}
+
+Grâce aux refactorings d'avant, ce test a été très simple à écrire !
+
+De plus il est on ne peut plus parlant et clair.
+
+> Toujours prendre soin de ses tests hein ?
+
+Toujours ! 👍
+
+> On le fait passer ?
+
+Avec plaisir ! Mais comment ?
+
+...
+
+...
+
+...
+
+> Comme ça !
+
+{% highlight swift %}
+
+{% endhighlight %}
