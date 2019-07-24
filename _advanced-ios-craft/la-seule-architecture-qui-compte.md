@@ -4,7 +4,7 @@ image: /images/2019/06/architecture.jpg
 title: La seule architecture qui compte
 description: Que veut dire "architecture" quand on parle d'un logiciel ? Quelles sont les caractéristiques d'une bonne architecture ?
 date: 16/06/2019
-updated_at: 21/06/2019
+updated_at: 23/07/2019
 published: true
 beta: false
 writing_time: 3
@@ -24,7 +24,7 @@ Vaste sujet qui me préoccupe depuis que j'ai commencé à créer des apps iOS e
 
 Après tout, c'est un choix important, non ? Une fois l'architecture choisie, impossible de revenir en arrière, n'est-ce pas ?
 
-Mais dites-moi, c'est quoi _une architecture_ ?
+Mais dis-moi, c'est quoi _une architecture_ ?
 
 <!--more-->
 
@@ -96,7 +96,9 @@ Deuxio, il n'y a vraiment pas de code au cas où !
 
 Il m'est déjà arrivé de complexifier le code en essayant d'anticiper les besoins. C'est tentant et motivant de créer du code __réutilisable__. Mais dans 95% des cas c'est _too much_.
 
-> Mieux vaut __dupliquer pour trouver la bonne abstraction__ que créer une mauvaise abstraction.
+<p class="highlight">
+Mieux vaut <strong>dupliquer pour trouver la bonne abstraction</strong> que créer une mauvaise abstraction.
+</p>
 
 Je préfère dupliquer une ou deux fois, puis prendre du recul pour trouver comment factoriser le code, afin de créer des abstractions qui ont une réelle utilité et un véritable sens.
 
@@ -114,7 +116,7 @@ Une bonne conception respecte les critères que j'ai listés ci-dessus et que je
 * il n'y a pas de code au cas où,
 * le code répond à un usage déterminé.
 
-Je ne vais pas vous le cacher, avoir une architecture qui remplit tous ces critères __est très difficile__.
+Je ne vais pas te le cacher, avoir une architecture qui remplit tous ces critères __est très difficile__.
 
 Il faut déjà réussir à bien comprendre le besoin, à déterminer précisément l'usage.
 
@@ -124,15 +126,15 @@ Il faut rendre son code compréhensible par les autres humains qui vont le lire 
 
 Il faut faire face aux particularités des frameworks et librairies qu'on utilise.
 
-Autant vous dire qu'avoir juste _du premier coup_ relève du miracle !
+Autant te dire qu'avoir juste _du premier coup_ relève du miracle !
 
 ### Faire émerger la conception
 
-_Mais si je n'arrive pas à avoir juste du premier coup...cela veut dire que je vais devoir changer ma conception en cours de route, la faire évoluer ?_
+> Mais si je n'arrive pas à avoir juste du premier coup...cela veut dire que je vais devoir changer ma conception en cours de route, la faire évoluer ?
 
 Exactement ! C'est ce que j'appelle __faire émerger la conception__.
 
-_Oh ! Et du coup faire émerger la conception revient à créer..._
+> Oh ! Et du coup faire émerger la conception revient à créer...
 
 __Une architecture émergente !__
 
@@ -147,7 +149,7 @@ J'ai déjà détaillé le premier point ci-dessus, passons au second.
 
 Si seulement les utilisateurs, utilisatrices, clientes & clients arrêtaient de changer tout le temps d'avis ! Cela serait beaucoup plus simple ! Nous aurions un cahier des charges figé et des spécifications fonctionnelles figées. Il nous serait alors si simple de concevoir une app qui réponde exactement à ce qui est demandé. Nous pourrions prendre le temps de bien concevoir, de faire de beaux diagrammes. Puis nous livrerions une app bien conçue et nous passerions à la suivante.
 
-_Le rêve quoi !_
+> Le rêve quoi !
 
 Vraiment ?
 
@@ -173,6 +175,6 @@ Il faut donc être capable de faire _évoluer_ cette conception, de la faire _é
 
 Pour cela, nous devons nous assurer que nous ne cassons rien au passage.
 
-_Et pour ne rien casser...on fait comment ?_
+> Et pour ne rien casser...on fait comment ?
 
-Je vous en parle dans [le prochain article](construire-une-architecture-emergente). 😉
+Je t'en parle dans [le prochain article](construire-une-architecture-emergente). 😉
