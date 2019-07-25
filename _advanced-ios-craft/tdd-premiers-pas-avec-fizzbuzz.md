@@ -652,7 +652,7 @@ func test_FizzBuzz_up_to_2_is_a_list_containing_1_and_2_as_string() {
 
 Grâce aux refactorings d'avant, ce test a été très simple à écrire !
 
-De plus il est on ne peut plus parlant et clair.
+De plus, il est on ne peut plus parlant et clair.
 
 > Toujours prendre soin de ses tests hein ?
 
@@ -671,5 +671,144 @@ Avec plaisir ! Mais comment ?
 > Comme ça !
 
 {% highlight swift %}
+func upTo(_ n: UInt) -> [String] {
+  if n == 0 {
+    return []
+  }
 
+  if n == 2 {
+    return [ "1", "\(n)" ]
+  }
+
+  return [ "\(n)" ]
+}
 {% endhighlight %}
+
+Bien joué ! Le problème c'est que ce n'est pas très propre...
+
+> C'est pour ça que la phase de Refactoring existe !
+
+😢 Je suis si fier de toi !
+
+> Supprimons les duplications en généralisant. Le `"1"` peut devenir `"\(n-1)"` dans un premier temps.
+
+{% highlight swift %}
+func upTo(_ n: UInt) -> [String] {
+  if n == 0 {
+    return []
+  }
+
+  if n == 2 {
+    return [ "\(n-1)", "\(n)" ]
+  }
+
+  return [ "\(n)" ]
+}
+{% endhighlight %}
+
+Hum...je vois un schéma qui se répète grâce à ce refactoring.
+
+Ça m'a tout l'air d'être un bon candidat pour une boucle.
+
+__En plus, une boucle est la généralisation d'un if !__
+
+{% highlight swift %}
+func upTo(_ n: UInt) -> [String] {
+  if n == 0 {
+    return []
+  }
+
+  var result: [String] = []
+
+  for i in (1...n) {
+    result.append("\(i)")
+  }
+
+  return result
+}
+{% endhighlight %}
+
+Déjà mieux !
+
+> On peut le faire en plus "prog fonctionnelle" please ? 🤗
+
+Oh oui, ce `var` me dérange aussi, mais comment ?
+
+> `map` !
+
+{% highlight swift %}
+func upTo(_ n: UInt) -> [String] {
+  if n == 0 {
+    return []
+  }
+
+  return (1...n).map { "\($0)" }
+}
+{% endhighlight %}
+
+> Woohoo ! 🎉
+
+Je me demande, est-ce que le premier `if` est toujours nécessaire ?
+
+> On peut regarder la doc de `map` sur les `ClosedRange` pour vérifier ?
+
+Trop long ! Je vais simplement virer ce `if` et vérifier si mes tests passent toujours !
+
+> Ah ouais pas bête... 😅
+
+{% highlight swift %}
+func upTo(_ n: UInt) -> [String] {    
+  return (1...n).map { "\($0)" }
+}
+{% endhighlight %}
+
+❌ __FAIL__
+
+Oups, ça ne marche pas !
+
+> Au moins nous avons pu vérifier en un rien de temps !
+
+Oui, c'est ce qui est intéressant avec de bons tests, on peut vérifier nos idées rapidement !
+
+Continuons...
+
+Le test échoue avec l'erreur suivante : `Fatal error: Can't form Range with upperBound < lowerBound`
+
+Effectivement, j'essaye de créer un `Range` avec `n = 0` soit `(1...0)` et ce n'est pas possible.
+
+Et si je mettais `(0...n)` plutôt ?
+
+{% highlight swift %}
+func upTo(_ n: UInt) -> [String] {
+  return (0...n).map { "\($0)" }
+}
+{% endhighlight %}
+
+❌ __FAIL__
+
+> Tous les tests échouent !
+
+Effectivement, mais les erreurs sont claires :
+- `XCTAssertEqual failed: ("[]") is not equal to ("["0"]")`
+- `XCTAssertEqual failed: ("["1"]") is not equal to ("["0", "1"]")`
+- `XCTAssertEqual failed: ("["1", "2"]") is not equal to ("["0", "1", "2"]")`
+
+Un magnifique `"0"` est ajouté.
+
+Cela est dû au fait que mon range démarre par `0`.
+
+Et si j'ignorais simplement le premier élément de mon range ?
+
+{% highlight swift %}
+func upTo(_ n: UInt) -> [String] {
+  return (0...n).dropFirst(1).map { "\($0)" }
+}
+{% endhighlight %}
+
+✅ __SUCCESS__
+
+Aaaah voilà qui est mieux !
+
+> Une ligne de code, waouh !
+
+Et tout ça grâce aux tests qui vérifient la non-régression !
