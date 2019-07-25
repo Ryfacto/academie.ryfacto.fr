@@ -748,7 +748,7 @@ func upTo(_ n: UInt) -> [String] {
 
 > Woohoo ! 🎉
 
-Je me demande, est-ce que le premier `if` est toujours nécessaire ?
+Je me demande...Est-ce que le premier `if` est toujours nécessaire ?
 
 > On peut regarder la doc de `map` sur les `ClosedRange` pour vérifier ?
 
