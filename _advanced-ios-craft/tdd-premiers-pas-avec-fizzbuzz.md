@@ -1186,3 +1186,89 @@ extension UInt {
 {% endhighlight %}
 
 Là je suis content ! Passons au test suivant !
+
+### Troisième règle métier : les multiples de 5 donnent "Buzz"
+
+<table>
+  <tr><td>Pour les multiples de <code>5</code>, affiche <code>Buzz</code> au lieu du nombre</td></tr>
+  <tr><td>Pour les multiples de <code>15</code>, affiche <code>FizzBuzz</code> au lieu du nombre</td></tr>
+  <tr><td>Afficher les nombres de 1 à 100</td></tr>
+</table>
+
+Le test :
+
+{% highlight swift %}
+func test_Multiples_of_5_are_displayed_as_Buzz() {
+  let examples: [UInt] = [ 5, 10, 20, 25, 35, 5 * 124 ]
+  for n in examples {
+    assertThatFizzBuzz(upTo: n, endsWith: "Buzz")
+  }
+}
+{% endhighlight %}
+
+__RED__ ! Je le fais passer :
+
+{% highlight swift %}
+private func stringFor(_ n: UInt) -> String {
+  if n.isMultipleOf3 {
+    return "Fizz"
+  }
+
+  if n % 5 == 0 {
+    return "Buzz"
+  }
+
+  return "\(n)"
+}
+{% endhighlight %}
+
+__GREEN__ !
+
+Et maintenant __REFACTORING__ !
+
+D'abord le code de prod :
+
+{% highlight swift %}
+struct FizzBuzz {
+
+  // ...
+
+  private func stringFor(_ n: UInt) -> String {
+    if n.isMultipleOf3 { return "Fizz" }
+    if n.isMultipleOf5 { return "Buzz" }
+    return "\(n)"
+  }
+}
+
+extension UInt {
+
+  // ...
+
+  var isMultipleOf5: Bool {
+    return self % 5 == 0
+  }
+}
+{% endhighlight %}
+
+Et enfin les tests, car je vois un pattern qui se répète :
+- une liste d'exemples,
+- je parcours la liste,
+- pour chaque élément je vérifie que le résultat termine par une `string` donnée.
+
+Voilà ce que ça donne :
+
+{% highlight swift %}
+func test_Multiples_of_3_are_displayed_as_Fizz() {
+  assertThatAllFizzBuzzUpTo([ 3, 6, 9, 12, 18, UInt(3 * 123) ], endsWith: "Fizz")
+}
+
+func test_Multiples_of_5_are_displayed_as_Buzz() {
+  assertThatAllFizzBuzzUpTo([ 5, 10, 20, 25, 35, UInt(5 * 124) ], endsWith: "Buzz")
+}
+
+private func assertThatAllFizzBuzzUpTo(_ examples: [UInt], endsWith expected: String, line: UInt = #line) {
+  for n in examples {
+    assertThatFizzBuzz(upTo: n, endsWith: expected, line: line)
+  }
+}
+{% endhighlight %}
