@@ -1272,3 +1272,130 @@ private func assertThatAllFizzBuzzUpTo(_ examples: [UInt], endsWith expected: St
   }
 }
 {% endhighlight %}
+
+### Dernière règle métier : les multiples de 3 et 5 donnent "FizzBuzz"
+
+<table>
+  <tr><td>Pour les multiples de <code>15</code>, affiche <code>FizzBuzz</code> au lieu du nombre</td></tr>
+  <tr><td>Afficher les nombres de 1 à 100</td></tr>
+</table>
+
+> Nous y sommes presques !
+
+Ouiii !! Mais ne crions pas victoire trop vite, il nous reste 2 testes à implémenter.
+
+Commençons avec notre dernière règle métier.
+
+{% highlight swift %}
+func test_Multiples_of_3_and_5_are_displayed_as_FizzBuzz() {
+  assertThatAllFizzBuzzUpTo([ 15, 30, 45, 60, 75, 90, UInt(3 * 5 * 125) ], endsWith: "FizzBuzz")
+}
+{% endhighlight %}
+
+En route pour __GREEN__ !
+
+{% highlight swift %}
+private func stringFor(_ n: UInt) -> String {
+  if n.isMultipleOf3 { return "Fizz" }
+  if n.isMultipleOf5 { return "Buzz" }
+  if n.isMultipleOf3 && n.isMultipleOf5 { return "FizzBuzz" }
+  return "\(n)"
+}
+{% endhighlight %}
+
+❌ __FAIL__
+
+Oups, quoi ?
+
+> Héhé, il faut mettre le troisème `if` avant les deux autres !
+
+Ah mais oui, suis-je bête ? Merci !
+
+_Heureusement qu'il y a les tests quand j'ai un coup de mou !_
+
+Comme ça c'est mieux !
+
+{% highlight swift %}
+private func stringFor(_ n: UInt) -> String {
+  if n.isMultipleOf3 && n.isMultipleOf5 { return "FizzBuzz" }
+  if n.isMultipleOf3 { return "Fizz" }
+  if n.isMultipleOf5 { return "Buzz" }
+  return "\(n)"
+}
+{% endhighlight %}
+
+Refactoring !
+
+> Hum...je ne vois rien à refactor...
+
+Je trouve qu'il y a deux tests qui ne sont pas assez explicites.
+
+> Ah ? Lesquels ?
+
+`test_Multiples_of_3_are_displayed_as_Fizz` et `test_Multiples_of_5_are_displayed_as_Buzz`.
+
+> Pourquoi ?
+
+Je m'attends à voir des multiples de 3 dans le premier, or je ne vois pas 15, on passe de 12 à 18.
+
+Et je m'attends à voir des multiples de 5 dans le deuxième, or je ne vois pas 15 non plus, on passe de 10 à 20.
+
+Le nom des tests ne reflète pas __exactement__ le besoin, il faut donc les renommer.
+
+> Comme ça par exemple ?
+
+{% highlight swift %}
+func test_Multiples_of_3_but_not_5_are_displayed_as_Fizz() {
+  // ...
+}
+
+func test_Multiples_of_5_but_not_3_are_displayed_as_Buzz() {
+  // ...
+}
+{% endhighlight %}
+
+Tout à fait ! 👍
+
+### Test d'acceptance : FizzBuzz de 1 à 100
+
+<table>
+  <tr><td>Afficher les nombres de 1 à 100</td></tr>
+</table>
+
+Bon, je ne sais pas toi mais écrire les valeurs d'exemples pour ce test à la main m'ennuie.
+
+Tu as confiance dans nos tests ?
+
+> Oui !
+
+Et si on laissait ce dernier test échouer en nous donnant les valeurs ?
+
+Ensuite on aura plus qu'à copier le resultat donnée par le test dans notre test et le tour est joué !
+
+> Genius ! 🤯
+
+{% highlight swift %}
+func test_Print_numbers_from_1_to_100() {
+  assertThatFizzBuzz(upTo: 100, is: [])
+}
+{% endhighlight %}
+
+❌ __FAIL__
+
+Yeah ! Haha ! J'ai beaucoup trop de fun à faire ça. 🤣
+
+Et je copie les valeurs dans mon test :
+
+{% highlight swift %}
+func test_Print_numbers_from_1_to_100() {
+  assertThatFizzBuzz(upTo: 100, is: [ "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz", "Fizz", "22", "23", "Fizz", "Buzz", "26", "Fizz", "28", "29", "FizzBuzz", "31", "32", "Fizz", "34", "Buzz", "Fizz", "37", "38", "Fizz", "Buzz", "41", "Fizz", "43", "44", "FizzBuzz", "46", "47", "Fizz", "49", "Buzz", "Fizz", "52", "53", "Fizz", "Buzz", "56", "Fizz", "58", "59", "FizzBuzz", "61", "62", "Fizz", "64", "Buzz", "Fizz", "67", "68", "Fizz", "Buzz", "71", "Fizz", "73", "74", "FizzBuzz", "76", "77", "Fizz", "79", "Buzz", "Fizz", "82", "83", "Fizz", "Buzz", "86", "Fizz", "88", "89", "FizzBuzz", "91", "92", "Fizz", "94", "Buzz", "Fizz", "97", "98", "Fizz", "Buzz" ])
+}
+{% endhighlight %}
+
+✅ __SUCCESS__
+
+Tadaaaa ! 🎉
+
+## Conclusion
+
+## Pour aller plus loin
