@@ -9,6 +9,7 @@ published: true
 beta: false
 writing_time: 3
 ahah: 1
+reading_time: 7
 comments:
     - author: Thibaut
       author_url: "https://twitter.com/ThibautSchmidt"

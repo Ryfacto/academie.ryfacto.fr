@@ -9,6 +9,8 @@ published: true
 beta: true
 writing_time: 1
 ahah: 1
+reading_time: 30
+content_type: Tutoriel
 technical_environment:
   swift: 5
   ios: 12.2

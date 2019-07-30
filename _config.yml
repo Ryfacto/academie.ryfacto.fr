@@ -35,6 +35,7 @@ defaults:
           width: 300
           height: 89
         excerpt_separator: <!--more-->
+        content_type: Article
 collections:
   advanced-ios-craft:
     output: true

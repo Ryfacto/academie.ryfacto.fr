@@ -8,7 +8,7 @@ layout: default
       <img src="{{ page.image | relative_url }}" alt="{{ page.image }}" />
     {% endif %}
     <h1 class="post-title">{{ page.title | escape }}</h1>
-    <p>Publié le <em>{{ page.date | date: "%d/%m/%Y" }}</em></p>
+    <p><em>{{ page.date | date: "%d/%m/%Y" }} · {{ page.content_type }} ({{ page.reading_time }} minutes)</em></p>
   </header>
 
   {% if page.technical_environment %}

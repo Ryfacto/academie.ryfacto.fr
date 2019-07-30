@@ -21,7 +21,7 @@ Ne passe pas à côté en __t'inscrivant à la newsletter !__
     {%- assign posts = site.advanced-ios-craft | where:"beta","false" -%}
     {%- for post in posts -%}
     <li>
-      <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+      <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }} · {{ post.content_type }} ({{ post.reading_time }} minutes)</span>
       <h3>
         <a class="post-link" href="{{ post.url | relative_url }}">
           {{ post.title | escape }}

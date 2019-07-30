@@ -9,6 +9,7 @@ published: true
 beta: false
 writing_time: 7
 ahah: 3
+reading_time: 17
 custom_call_to_action_form: construire_une_architecture_emergente_download_pdf.html
 comments:
 ---
