@@ -345,13 +345,4 @@ Si tu débutes en TDD, je t'encourage vivement à y aller doucement.
 
 ## Pour aller plus loin
 
-Continue à apprendre TDD __dès maintenant__ en téléchargeant le contenu additionel lié à cette série.
-
-Tu y trouveras :
-- une vidéo pas-à-pas de 30 minutes où je t'accompagne sur FizzBuzz jusqu'au bout,
-- un fichier PDF de 8 pages résumant les étapes clés,
-- le code source de la solution finale.
-
-<button class="show-popup">Clique ici pour le télécharger !</button>
-
 {%- include bonus-intro-tdd.html -%}

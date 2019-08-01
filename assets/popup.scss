@@ -25,6 +25,7 @@
 
     &:hover {
       text-decoration: underline;
+      cursor: pointer;
     }
   }
 }
@@ -37,6 +38,7 @@ button.show-popup {
   border-radius: 8px;
   color: white;
   font-size: 1em;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 630px) {
