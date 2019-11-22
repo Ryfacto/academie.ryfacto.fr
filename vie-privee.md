@@ -25,7 +25,7 @@ Je cherche aussi à déterminer d'où tu viens, comme via un partage Twitter ou 
 
 Pour cela j'utilise Google Analytics...__mais NON !__ Ce sont des méchants voleurs de vie privée qui fournissent un service gratuit en échange d'informations sur __TOI__, mon cher lecteur ou ma chère lectrice !
 
-__Je préfère payer 14$ tous les mois__ en utilisant [Fathom](https://usefathom.com/), et eux non plus [ne rigolent pas](https://usefathom.com/data/) avec ta vie privée.
+__Je préfère payer 14$ tous les mois__ en utilisant [Fathom](https://usefathom.com/ref/HP9HLZ), et eux non plus [ne rigolent pas](https://usefathom.com/data/) avec ta vie privée.
 
 ## Mais encore ?
 
