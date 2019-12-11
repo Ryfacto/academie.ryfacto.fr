@@ -277,32 +277,6 @@ blockquote {
   }
 }
 
-@media screen and (min-width: 950px) {
-  .social-sharing {
-    width: 800px !important;
-    position: relative;
-    left: -90px;
-  }
-
-  .social-sharing-content {
-    position: fixed;
-    top: 100px;
-    width: 60px;
-
-    p:first-child {
-      display: none;
-    }
-
-    p {
-      text-align: center;
-    }
-  }
-
-  .author {
-    margin-top: 40px;
-  }
-}
-
 .mc_embed_signup {
   margin: 60px 10px;
   padding: 20px 10px 30px 10px;
