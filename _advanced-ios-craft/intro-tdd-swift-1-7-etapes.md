@@ -1,12 +1,12 @@
 ---
 layout: article
-image:
+image: /images/2019/12/intro-tdd.jpg
 title: Introduction à TDD en Swift (Partie 1) - 7 étapes essentielles
 description: Apprends les bases de TDD en Swift par l'exemple. Démarre avec un premier cycle complet de 7 étapes !
-date: 30/07/2019
-updated_at: 30/07/2019
+date: 11/12/2019
+updated_at: 11/12/2019
 published: true
-beta: true
+beta: false
 writing_time: 5
 ahah: 2
 reading_time: 10
@@ -23,8 +23,8 @@ comments:
   <p>Cet article fait partie de la série <em>"Introduction à TDD en Swift"</em></p>
   <ul>
     <li><strong>Introduction à TDD en Swift (Partie 1) - 7 étapes essentielles</strong></li>
-    <li class="coming-soon">Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation <em>(dispo le 14/08/2019)</em></li>
-    <li class="coming-soon">Introduction à TDD en Swift (Partie 3) - Une bonne documentation <em>(dispo le 28/08/2019)</em></li>
+    <li class="coming-soon">Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation <em>(bientôt dispo)</em></li>
+    <li class="coming-soon">Introduction à TDD en Swift (Partie 3) - Une bonne documentation <em>(bientôt dispo)</em></li>
   </ul>
 </div>
 
@@ -71,9 +71,9 @@ Pour cet exemple je vais exécuter les tests au sein de l'app.
 
 Le problème c'est que ce n'est pas performant lorsque l'on écrit des tests pour une véritable app.
 
-Je te montrerai dans le prochain article (où nous allons créer une véritable app iOS en TDD), comment faire pour exécuter les tests indépendamment de l'app.
+Je te montrerai dans un prochain tutoriel (où nous allons créer une véritable app iOS en TDD), comment faire pour exécuter les tests indépendamment de l'app.
 
-_(Psst...[inscris-toi à la newsletter](signup) pour ne pas le louper !)_
+_(Psst...[direction la newsletter](signup) pour ne pas le louper !)_
 
 ## Étape 1 : quels sont les comportements attendus ?
 
@@ -103,7 +103,29 @@ _Je t'invite à faire l'exercice de ton côté. Liste tous les tests (comporteme
 
 ...
 
-C'est bon ?
+Tu ne l'as pas fait n'est-ce pas ?
+
+Pour que ce tutoriel t'apporte le plus de valeur, je t'encourage vivement à faire l'exo !
+
+Allez, j'ai confiance en toi !
+
+...
+
+...
+
+...
+
+Bon, avoue que tu ne l'as toujours pas fait ?
+
+Tu es grand(e), tu fais comme tu veux, mais je t'aurais prévenu ! 😉
+
+...
+
+...
+
+...
+
+C'est bon ? Super !
 
 Voici ma liste :
 
@@ -163,7 +185,7 @@ Si je commence par les tests concernant les règles métiers, je risque de me re
 
 Je risque de devoir implémenter tout l'algo, ou une grosse partie d'un coup !
 
-Dans un prochain article, je te montrerai un exemple qui illustre un blocage si on ne priorise pas correctement. Pour ne pas le rater, [inscris-toi à la newsletter !](signup)
+Dans un prochain article, je te montrerai un exemple qui illustre un blocage si on ne priorise pas correctement. Pour ne pas le rater, [je t'invite à t'inscrire à la newsletter](signup).
 
 ## Étape 3 : un peu de conception
 
@@ -318,7 +340,7 @@ J'ai fini d'écrire le premier test, je peux donc mettre à jour la liste en ret
 
 🎉 Tu viens de terminer ton premier cycle TDD, bravo !
 
-Résumons :
+Résumons les étapes d'un cycle TDD :
 1. je crée ou mets à jour la liste des __comportements attendus__,
 2. j'ordonne la liste en commençant par les tests les plus simples (ceux qui me feront écrire le moins de code) ainsi que les cas à la marge ; pour éviter de me retrouver bloquer,
 3. je fais juste assez de conception pour m'aider à écrire les tests, et surtout le premier,
@@ -343,6 +365,6 @@ Puis dans la phase de __REFACTORING__ prendre du recul, de la hauteur et vraimen
 
 Si tu débutes en TDD, je t'encourage vivement à y aller doucement.
 
-## Pour aller plus loin
+__Je te dis à très vite dans le prochain article de cette série <em>"Introduction à TDD en Swift"</em> !__
 
-{%- include bonus-intro-tdd.html -%}
+Pour ne pas le louper, c'est par là ! 👇

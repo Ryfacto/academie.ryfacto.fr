@@ -24,7 +24,7 @@ comments:
   <ul>
     <li><a href="intro-tdd-swift-1-7-etapes">Introduction à TDD en Swift (Partie 1) - 7 étapes essentielles</a></li>
     <li><strong>Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation</strong></li>
-    <li class="coming-soon">Introduction à TDD en Swift (Partie 3) - Une bonne documentation <em>(dispo le 28/08/2019)</em></li>
+    <li class="coming-soon">Introduction à TDD en Swift (Partie 3) - Une bonne documentation <em>(bientôt dispo)</em></li>
   </ul>
 </div>
 
@@ -519,4 +519,4 @@ Et tout ça grâce aux tests qui vérifient la non-régression !
 
 ## Conclusion
 
-## Pour aller plus loin
+TODO
