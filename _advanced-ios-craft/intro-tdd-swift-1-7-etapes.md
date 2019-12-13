@@ -181,7 +181,7 @@ Moi oui ! Voici ma liste priorisée avec quelques explications :
 
 Très bonne question !
 
-Si je commence par les tests concernant les règles métiers, je risque de me retrouver bloquer.
+Si je commence par les tests concernant les règles métiers, je risque de me retrouver bloqué.
 
 Je risque de devoir implémenter tout l'algo, ou une grosse partie d'un coup !
 
@@ -342,7 +342,7 @@ J'ai fini d'écrire le premier test, je peux donc mettre à jour la liste en ret
 
 Résumons les étapes d'un cycle TDD :
 1. je crée ou mets à jour la liste des __comportements attendus__,
-2. j'ordonne la liste en commençant par les tests les plus simples (ceux qui me feront écrire le moins de code) ainsi que les cas à la marge ; pour éviter de me retrouver bloquer,
+2. j'ordonne la liste en commençant par les tests les plus simples (ceux qui me feront écrire le moins de code) ainsi que les cas à la marge ; pour éviter de me retrouver bloqué,
 3. je fais juste assez de conception pour m'aider à écrire les tests, et surtout le premier,
 4. j'écris le premier test en utilisant du code qui n'existe pas, c'est la phase __RED__,
 5. je fais passer le test sans me préoccuper des horreurs de conception que je fais, c'est la phase __GREEN__,
