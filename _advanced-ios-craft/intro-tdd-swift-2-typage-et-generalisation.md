@@ -46,7 +46,7 @@ Alors, prêt(e) ?
 
 ## Et le cycle recommence !
 
-### FizzBuzz "jusqu'à 0"
+### Les tests : plus importants que le code de prod ?
 
 Modifie __FizzBuzz_Spec.swift__ pour y ajouter ce test :
 
@@ -142,7 +142,7 @@ Exact !
   <tr><td>100 -> [1, 2, Fizz, 4, Buzz, Fizz, ... ]</td></tr>
 </table>
 
-### FizzBuzz "jusqu'à -1"
+### Et si on utilisait le système de type plutôt qu'écrire un test ?
 
 Je me pose la question si je dois réellement écrire un test pour celui-ci.
 
@@ -182,7 +182,7 @@ On vient de s'épargner un test, donc du code à maintenir, génial ! Merci le s
   <tr><td>100 -> [1, 2, Fizz, 4, Buzz, Fizz, ... ]</td></tr>
 </table>
 
-### FizzBuzz "jusqu'à 1"
+### Plus les tests deviennent spécifiques, plus le code de prod devient générique !
 
 Ajoute le test suivant :
 
@@ -344,7 +344,7 @@ Un petit run des tests pour vérifier qu'on n'a rien cassé au passage...
 
 ...et ça marche ! Merveilleux !
 
-### FizzBuzz "jusqu'à 2"
+### TDD : une aide pour raisonner plus profondément
 
 Je viens de penser à un nouveau test.
 
