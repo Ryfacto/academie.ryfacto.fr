@@ -4,9 +4,6 @@ layout: default
 <article class="post">
 
   <header class="post-header">
-    {% if page.image %}
-      <img src="{{ page.image | relative_url }}" alt="{{ page.image }}" />
-    {% endif %}
     <h1 class="post-title">{{ page.title | escape }}</h1>
     <p><em>{{ page.date | date: "%d/%m/%Y" }} · {{ page.content_type }} ({{ page.reading_time }} minutes)</em></p>
   </header>
@@ -28,7 +25,7 @@ layout: default
   {%- endif -%}
 
   <p class="chapter-value">
-    J'ai écrit cet article pendant <strong>{{ page.writing_time }}h</strong> et j'ai eu <strong>{{ page.ahah }} <em>"ah-ah moment"</em></strong> sous la douche ou en pleine nuit. Pour m'aider, partage-le avec un(e) ami(e) ou sur les réseaux sociaux !
+    J'ai écrit cet article pendant <strong>{{ page.writing_time }}h</strong> et j'ai eu <strong>{{ page.ahah }} <em>"ah-ah moment"</em></strong> sous la douche ou en pleine nuit. Tu as aimé cet article ? Pourquoi ne pas le partager avec un(e) ami(e) ou sur les réseaux sociaux ?! ❤️
   </p>
 
   <aside class="social-sharing">

@@ -23,7 +23,7 @@ comments:
   <p>Cet article fait partie de la série <em>"Introduction à TDD en Swift"</em></p>
   <ul>
     <li><strong>Introduction à TDD en Swift (Partie 1) - 7 étapes essentielles</strong></li>
-    <li class="coming-soon">Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation <em>(bientôt dispo)</em></li>
+    <li><a href="intro-tdd-swift-2-typage-et-generalisation">Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation</a></li>
     <li class="coming-soon">Introduction à TDD en Swift (Partie 3) - Une bonne documentation <em>(bientôt dispo)</em></li>
   </ul>
 </div>
@@ -185,7 +185,7 @@ Si je commence par les tests concernant les règles métiers, je risque de me re
 
 Je risque de devoir implémenter tout l'algo, ou une grosse partie d'un coup !
 
-Dans un prochain article, je te montrerai un exemple qui illustre un blocage si on ne priorise pas correctement. Pour ne pas le rater, [je t'invite à t'inscrire à la newsletter](signup).
+Dans un prochain article, je te montrerai un exemple qui illustre un blocage si on ne priorise pas correctement.
 
 ## Étape 3 : un peu de conception
 
@@ -368,3 +368,5 @@ Si tu débutes en TDD, je t'encourage vivement à y aller doucement.
 __Je te dis à très vite dans le prochain article de cette série <em>"Introduction à TDD en Swift"</em> !__
 
 Pour ne pas le louper, c'est par là ! 👇
+
+<a href="intro-tdd-swift-2-typage-et-generalisation">Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation</a>

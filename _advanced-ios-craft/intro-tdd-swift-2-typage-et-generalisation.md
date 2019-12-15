@@ -1,12 +1,12 @@
 ---
 layout: article
-image:
+image: /images/2019/12/intro-tdd-2.jpg
 title: Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation
 description: Continue avec moi le premier exemple FizzBuzz. Découvre la puissance du système de type de Swift ainsi qu'une propriété intéressante des bons tests !
-date: 14/08/2019
-updated_at: 14/08/2019
-published: false
-beta: true
+date: 18/12/2019
+updated_at: 18/12/2019
+published: true
+beta: false
 writing_time: 4
 ahah: 3
 reading_time: 9
@@ -28,7 +28,19 @@ comments:
   </ul>
 </div>
 
-INTRO HERE
+Dans le [précédent article](intro-tdd-swift-1-7-etapes) de cette série tu as appris les bases de TDD en faisant un cycle complet de 7 étapes.
+
+Nous allons continuer aujourd'hui le kata [FizzBuzz](http://kata-log.rocks/fizz-buzz-kata) en implémentant plusieurs nouveaux tests en TDD.
+
+Cela te permettra de mieux comprendre la profondeur et l'intérêt de cette pratique qui a changée ma manière de travailler.
+
+Au programme :
+- trois techniques de refactoring pour améliorer la qualité du code,
+- l'utilisation du système de type pour éviter l'écriture d'un test,
+- des propriétés intéressantes du TDD, au-delà des tests en eux-même,
+- du fun comme jamais ! _(Ok ça c'est peut-être un peu exagéré !_ 😂_)_
+
+Alors, prêt(e) ?
 
 <!--more-->
 
@@ -93,7 +105,7 @@ Et dans les tests ?
 
 > Quoi ? On doit aussi refactorer les tests ?
 
-Et comment ! C'est encore plus important que le code de production !
+Et comment ! __C'est encore plus important que le code de production !__
 
 Les tests sont-ils bien conçus selon toi ?
 
@@ -113,11 +125,13 @@ Il y a un test qui est devenu inutile...
 
 ...notre test "marche-pied" !
 
-Tu peux donc le supprimer, il s'agit de la méthode `test_Creation`. _Whoop! Supprimée!_
+Tu peux donc le supprimer, il s'agit de la méthode `test_Creation`.
+
+_Whoop! Supprimé!_
 
 > Ensuite on met à jour la liste !
 
-Extact !
+Exact !
 
 <table>
   <tr><td>-1 -> []</td></tr>
@@ -346,6 +360,20 @@ Je l'ajoute en haut de la liste :
   <tr><td>100 -> [1, 2, Fizz, 4, Buzz, Fizz, ... ]</td></tr>
 </table>
 
+> Tu modifies souvent ta liste comme ça ?
+
+Oui cela m'arrive tout le temps !
+
+Au fur et à mesure que je fais passer des tests, d'autres cas me viennent en tête.
+
+C'est un des bienfaits de la pratique du TDD.
+
+Elle nous pousse à raisonner plus intensivement sur notre code et ainsi nous permet de trouver plus de cas à tester.
+
+Cela a pour effet de rendre le code plus robuste, d'éviter certains bugs.
+
+On continue ? 😉
+
 Ajoute le test suivant :
 
 {% highlight swift %}
@@ -392,7 +420,7 @@ Bien joué ! Le problème c'est que ce n'est pas très propre...
 
 > C'est pour ça que la phase de Refactoring existe !
 
-😢 Je suis si fier de toi !
+😢 Oh...je suis si fier de toi !
 
 > Supprimons les duplications en généralisant. Le `"1"` peut devenir `"\(n-1)"` dans un premier temps.
 
@@ -515,8 +543,20 @@ Aaaah voilà qui est mieux !
 
 > Une ligne de code, waouh !
 
-Et tout ça grâce aux tests qui vérifient la non-régression !
+Et tout ça grâce aux tests actuels qui vérifient la non-régression !
 
 ## Conclusion
 
-TODO
+Nous avons vu beaucoup de concepts dans cet article.
+
+__Les tests nous ont permis de vérifier que l'on ne casse rien__ lorsqu'on essaye une idée  (supprimer un `if` par exemple). De plus, il est parfois plus efficace de faire une rapide expérience en changeant le code plutôt qu'étudier la documentation. Grâce aux tests, je peux donc gagner du temps à ce niveau-là. Et ce même sur un exemple simpliste. Je te laisse imaginer sur un cas plus complexe de la vraie vie !
+
+__Les tests nous poussent à raisonner sur notre code__, à imaginer de nouveaux cas à la marge, à rendre notre code plus robuste. Ce ne sont pas tant les tests en soi qui le permettent mais la pratique de leur écriture, la pratique du TDD.
+
+__Les tests sont plus importants que le code de production__, il faut en prendre soin. C'est grâce à leur présence et à la confiance que nous leur accordons que nous pouvons manipuler le code de production avec sérénité (et l'améliorer !).
+
+Enfin, une propriété importante de la pratique est qu'__au fur et à mesure que les tests deviennent spécifiques, le code de production devient générique__.
+
+__Je te dis à très vite dans le prochain article de cette série <em>"Introduction à TDD en Swift"</em> !__
+
+Pour ne pas le louper, c'est par là ! 👇
