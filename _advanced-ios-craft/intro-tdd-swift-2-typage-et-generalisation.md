@@ -3,13 +3,13 @@ layout: article
 image: /images/2019/12/intro-tdd-2.jpg
 title: Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation
 description: Continue avec moi le premier exemple FizzBuzz. Découvre la puissance du système de type de Swift ainsi qu'une propriété intéressante des bons tests !
-date: 18/12/2019
+date: 17/12/2019
 updated_at: 18/12/2019
 published: true
 beta: false
-writing_time: 4
-ahah: 3
-reading_time: 9
+writing_time: 5
+ahah: 1
+reading_time: 10
 content_type: Tutoriel
 technical_environment:
   swift: 5
