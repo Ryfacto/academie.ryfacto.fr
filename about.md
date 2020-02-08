@@ -62,4 +62,4 @@ Si on est samedi matin, je suis sûrement en train de cuisiner pour la semaine (
 
 J'ai fondé ma société [Ryfacto](https://www.ryfacto.fr) qui propose de la création de logiciels & de l'accompagnement sur mesure.
 
-Je peux t'aider, toi et ton équipe, à __retrouver productivité, créativité et amour du travail bien fait__. [Contactez moi !](mailto:{{ site.author_email }})
+Je peux t'aider, toi et ton équipe, à __retrouver productivité, créativité et amour du travail bien fait__. [Contacte moi !](mailto:{{ site.author_email }})

@@ -7,7 +7,7 @@ date: 28/08/2019
 updated_at: 28/08/2019
 published: false
 beta: true
-writing_time: 6
+writing_time: 7
 ahah: 2
 reading_time: 14
 content_type: Tutoriel
@@ -28,7 +28,20 @@ comments:
   </ul>
 </div>
 
-INTRO HERE
+Dans le [précédent article](intro-tdd-swift-2-typage-et-generalisation) de cette série tu as appris les bienfaits de la pratique de TDD :
+- les tests sont fiables et nous permettent de ne rien casser,
+- les tests nous poussent à raisoner plus profondément, à avoir un code plus robuste,
+- les tests sont plus importants que le code de production.
+
+Nous allons continuer aujourd'hui le kata [FizzBuzz](http://kata-log.rocks/fizz-buzz-kata) en implémentant plusieurs nouveaux tests en TDD.
+
+Au programme :
+- pourquoi une suite de tests doit constituer la meilleure documentation possible,
+- je vais déroger au cycle RED-GREEN-REFACTOR (_crime crime !_ 😂),
+- tu vas avoir un petit aperçu du property-based testing (_wat?_),
+- et enfin on va utiliser le résultat d'un test pour écrire un test (_waaaat?_).
+
+Alors, prêt(e) ?
 
 <!--more-->
 
@@ -57,7 +70,7 @@ Mon envie d'avoir une bonne suite de tests, une bonne __documentation__ me pouss
 
 Souvent, en écrivant des tests, je me rends compte qu'il me manque des informations.
 
-Je découvre des cas d'usages (des cas d'erreurs la plupart du temps), pour lesquels j'ai besoin de questionner les utilisateurs & utilisatrices (ou le Product Owner).
+Je découvre des cas d'usage (des cas d'erreur la plupart du temps), pour lesquels j'ai besoin de questionner les utilisateurs & utilisatrices (ou le Product Owner).
 
 Révisons nos deux derniers tests :
 - `test_FizzBuzz_up_to_1_is_a_list_containing_1_as_string`
@@ -151,13 +164,11 @@ func test_Numbers_not_multiple_of_3_or_5_are_displayed_as_is() {
 
 Oui ça me plaît assez...
 
-> Mais...?
-
 Mais j'ai l'impression de réécrire l'algo dans mes tests !
 
-> Et...c'est grave ça ?
+En effet je transforme un nombre en `String` (`"\(n)"`) comme dans mon code de prod.
 
-Oui car cela introduit de la duplication et du couplage entre les tests et le code de prod !
+Ce n'est pas top car cela introduit de la duplication et du couplage entre les tests et le code de prod !
 
 Modifions le test pour éviter cela :
 
@@ -178,11 +189,11 @@ Je vois plusieurs duplications :
 1. il y a des tests redondants,
 2. il y a de la duplication dans les deux méthodes d'assertions.
 
-Commençons par le 1., on peut supprimer les tests suivants :
+Commençons par le premier point, on peut supprimer les tests suivants :
 - `test_FizzBuzz_up_to_1_is_a_list_containing_1_as_string`
 - `test_FizzBuzz_up_to_2_is_a_list_containing_1_and_2_as_string`
 
-Et enfin le 2., on crée une nouvelle méthode pour factoriser le code similaire dans nos deux assertions :
+Et enfin le deuxième, on crée une nouvelle méthode pour factoriser le code similaire dans nos deux assertions :
 
 {% highlight swift %}
 private func assertThatFizzBuzz(upTo n: UInt, is expected: [String], line: UInt = #line) {
@@ -249,21 +260,15 @@ Très bonne remarque !
 
 Pourquoi est-il utile de passer par la phase __RED__ ?
 
-> Pour vérifier que notre test est utile et s'assurer que son échec donne assez d'informations pour nous aider à régler l'éventuel problème.
+> Pour vérifier que notre test est utile et s'assurer que son échec donne assez d'informations pour nous aider à le faire passer à nouveau.
 
 Exactement !
 
 Je prends le risque ici d'écrire un test inutile et je ne vérifie pas les informations liées à son éventuel échec.
 
-Et à quoi servent les tests ?
+Les tests servent à vérifier la non-régression et à guider la conception.
 
-> À vérifier la non-régression et à guider la conception.
-
-Mais encore...?
-
-> Heu...ah oui ! Les tests servent de __documentation des comportements attendus__ !
-
-Tout à fait !
+Ils servent aussi de __documentation des comportements attendus__ !
 
 Je souhaite spécifier les comportements attendus ! Un des comportements que j'attends est que `FizzBuzz` me retourne une bonne liste de `String` donc il me faut un test pour le spécifier.
 
@@ -280,7 +285,7 @@ func upTo(_ n: UInt) -> [String] {
 
 J'obtiens 98 erreurs de la forme : `-[TDDFizzBuzzTests.FizzBuzz_Spec test_Result_list_is_of_the_same_size_as_requested_upper_bound] : XCTAssertEqual failed: ("2") is not equal to ("1")`.
 
-Je peux facilement déduire, à partir du nom du test et du message, que le problème ce situe au niveau de la taille de la liste.
+Je peux facilement déduire, à partir du nom du test et du message, que le problème se situe au niveau de la taille de la liste.
 
 Remettons le code de production en état pour refaire passer le test :
 
@@ -336,15 +341,11 @@ func upTo(_ n: UInt) -> [String] {
 }
 {% endhighlight %}
 
-> REFACTORING !
+Et je passe au __REFACTORING__.
 
 La méthode `upTo` commence à devenir assez longue, c'est le smell [Long Method](https://refactoring.guru/smells/long-method).
 
-Quel est le _traitement_ ?
-
-> C'est [Extract Method](https://refactoring.guru/extract-method) !
-
-Tout juste !
+Comme _traitement_ j'utilise [Extract Method](https://refactoring.guru/extract-method).
 
 {% highlight swift %}
 func upTo(_ n: UInt) -> [String] {
@@ -425,7 +426,9 @@ func test_Multiples_of_5_are_displayed_as_Buzz() {
 }
 {% endhighlight %}
 
-__RED__ ! Je le fais passer :
+__RED__ !
+
+Je le fais passer :
 
 {% highlight swift %}
 private func stringFor(_ n: UInt) -> String {
@@ -499,9 +502,9 @@ private func assertThatAllFizzBuzzUpTo(_ examples: [UInt], endsWith expected: St
   <tr><td>Afficher les nombres de 1 à 100</td></tr>
 </table>
 
-> Nous y sommes presques !
+> Nous y sommes presque !
 
-Ouiii !! Mais ne crions pas victoire trop vite, il nous reste 2 testes à implémenter.
+Ouiii !! Mais ne crions pas victoire trop vite, il nous reste 2 tests à implémenter.
 
 Commençons avec notre dernière règle métier.
 
@@ -532,7 +535,7 @@ Ah mais oui, suis-je bête ? Merci !
 
 _Heureusement qu'il y a les tests quand j'ai un coup de mou !_
 
-Comme ça c'est mieux !
+Comme ça c'est mieux :
 
 {% highlight swift %}
 private func stringFor(_ n: UInt) -> String {
@@ -543,25 +546,19 @@ private func stringFor(_ n: UInt) -> String {
 }
 {% endhighlight %}
 
-Refactoring !
-
-> Hum...je ne vois rien à refactor...
+__REFACTORING__ !
 
 Je trouve qu'il y a deux tests qui ne sont pas assez explicites.
 
-> Ah ? Lesquels ?
-
 `test_Multiples_of_3_are_displayed_as_Fizz` et `test_Multiples_of_5_are_displayed_as_Buzz`.
 
-> Pourquoi ?
-
-Je m'attends à voir des multiples de 3 dans le premier, or je ne vois pas 15, on passe de 12 à 18.
+En effet, je m'attends à voir des multiples de 3 dans le premier, or je ne vois pas 15, on passe de 12 à 18.
 
 Et je m'attends à voir des multiples de 5 dans le deuxième, or je ne vois pas 15 non plus, on passe de 10 à 20.
 
 Le nom des tests ne reflète pas __exactement__ le besoin, il faut donc les renommer.
 
-> Comme ça par exemple ?
+Comme ceci :
 
 {% highlight swift %}
 func test_Multiples_of_3_but_not_5_are_displayed_as_Fizz() {
@@ -572,8 +569,6 @@ func test_Multiples_of_5_but_not_3_are_displayed_as_Buzz() {
   // ...
 }
 {% endhighlight %}
-
-Tout à fait ! 👍
 
 ## Test d'acceptance : FizzBuzz de 1 à 100
 
@@ -589,7 +584,7 @@ Tu as confiance dans nos tests ?
 
 Et si on laissait ce dernier test échouer en nous donnant les valeurs ?
 
-Ensuite on aura plus qu'à copier le resultat donnée par le test dans notre test et le tour est joué !
+Ensuite on n'aura plus qu'à copier le resultat donnée par le test dans notre test et le tour est joué !
 
 > Genius ! 🤯
 
@@ -617,4 +612,15 @@ Tadaaaa ! 🎉
 
 ## Conclusion
 
-TODO
+Voilà qui achève cette belle introduction à TDD en Swift.
+
+J'espère que cela t'a aidé à apprécier cette pratique qui change mon quotidien depuis 2016 et qui m'apporte une grande sérénité.
+
+Tu as appris dans ce dernier article que :
+- pour écrire de bons tests, il faut capturer __fidèlement__ le besoin,
+- ce n'est pas parcequ'un test ne nous fait pas écrire du code de prod qu'il est inutile,
+- un test est avant tout là pour __spécifier un comportement__ et sert à la __documentation du code__.
+
+Si tu as apprécié cette série sur TDD, n'hésite pas à t'inscrire à la Newsletter ci-dessous pour ne rien manquer des prochains articles.
+
+Enfin, si tu veux __aller plus loin et plus vite__ dans ta maîtrise de cette pratique tu peux [faire appel à moi directement](mailto:{{ site.author_email }}?subject={{ "J'aimerais être accompagné en TDD" | escape_once }}) !

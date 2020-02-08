@@ -32,7 +32,7 @@ Dans le [précédent article](intro-tdd-swift-1-7-etapes) de cette série tu as 
 
 Nous allons continuer aujourd'hui le kata [FizzBuzz](http://kata-log.rocks/fizz-buzz-kata) en implémentant plusieurs nouveaux tests en TDD.
 
-Cela te permettra de mieux comprendre la profondeur et l'intérêt de cette pratique qui a changée ma manière de travailler.
+Cela te permettra de mieux comprendre la profondeur et l'intérêt de cette pratique qui a changé ma manière de travailler.
 
 Au programme :
 - trois techniques de refactoring pour améliorer la qualité du code,
