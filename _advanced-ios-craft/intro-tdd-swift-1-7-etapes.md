@@ -24,7 +24,7 @@ comments:
   <ul>
     <li><strong>Introduction à TDD en Swift (Partie 1) - 7 étapes essentielles</strong></li>
     <li><a href="intro-tdd-swift-2-typage-et-generalisation">Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation</a></li>
-    <li class="coming-soon">Introduction à TDD en Swift (Partie 3) - Une bonne documentation <em>(bientôt dispo)</em></li>
+    <li><a href="intro-tdd-swift-3-une-bonne-documentation">Introduction à TDD en Swift (Partie 3) - Une bonne documentation</a></li>
   </ul>
 </div>
 
@@ -365,8 +365,4 @@ Puis dans la phase de __REFACTORING__ prendre du recul, de la hauteur et vraimen
 
 Si tu débutes en TDD, je t'encourage vivement à y aller doucement.
 
-__Je te dis à très vite dans le prochain article de cette série <em>"Introduction à TDD en Swift"</em> !__
-
-Pour ne pas le louper, c'est par là ! 👇
-
-<a href="intro-tdd-swift-2-typage-et-generalisation">Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation</a>
+Je te dis à très vite dans [le prochain article](intro-tdd-swift-2-typage-et-generalisation) de cette série _"Introduction à TDD en Swift"_ !
