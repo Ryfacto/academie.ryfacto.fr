@@ -24,7 +24,7 @@ comments:
   <ul>
     <li><a href="intro-tdd-swift-1-7-etapes">Introduction à TDD en Swift (Partie 1) - 7 étapes essentielles</a></li>
     <li><strong>Introduction à TDD en Swift (Partie 2) - Vive le typage et la généralisation</strong></li>
-    <li class="coming-soon">Introduction à TDD en Swift (Partie 3) - Une bonne documentation <em>(bientôt dispo)</em></li>
+    <li><a href="intro-tdd-swift-3-une-bonne-documentation">Introduction à TDD en Swift (Partie 3) - Une bonne documentation</a></li>
   </ul>
 </div>
 
@@ -557,6 +557,4 @@ __Les tests sont plus importants que le code de production__, il faut en prendre
 
 Enfin, une propriété importante de la pratique est qu'__au fur et à mesure que les tests deviennent spécifiques, le code de production devient générique__.
 
-__Je te dis à très vite dans le prochain article de cette série <em>"Introduction à TDD en Swift"</em> !__
-
-Pour ne pas le louper, c'est par là ! 👇
+Je te dis à très vite dans [le prochain article](intro-tdd-swift-3-une-bonne-documentation) de cette série _"Introduction à TDD en Swift"_ !

@@ -1,12 +1,12 @@
 ---
 layout: article
-image:
+image: /images/2020/02/intro-tdd-3.jpeg
 title: Introduction à TDD en Swift (Partie 3) - Une bonne documentation
 description: Termine avec moi l'exemple FizzBuzz. Nous allons nous concentrer sur l'aspect documentation des tests !
-date: 28/08/2019
-updated_at: 28/08/2019
-published: false
-beta: true
+date: 10/02/2020
+updated_at: 11/02/2020
+published: true
+beta: false
 writing_time: 7
 ahah: 2
 reading_time: 14
@@ -621,6 +621,8 @@ Tu as appris dans ce dernier article que :
 - ce n'est pas parcequ'un test ne nous fait pas écrire du code de prod qu'il est inutile,
 - un test est avant tout là pour __spécifier un comportement__ et sert à la __documentation du code__.
 
-Si tu as apprécié cette série sur TDD, n'hésite pas à t'inscrire à la Newsletter ci-dessous pour ne rien manquer des prochains articles.
+Si tu veux __aller plus loin et plus vite__ dans ta maîtrise de cette pratique tu peux [faire appel à moi directement](mailto:{{ site.author_email }}?subject={{ "J'aimerais être accompagné en TDD" | escape_once }}) !
 
-Enfin, si tu veux __aller plus loin et plus vite__ dans ta maîtrise de cette pratique tu peux [faire appel à moi directement](mailto:{{ site.author_email }}?subject={{ "J'aimerais être accompagné en TDD" | escape_once }}) !
+Pour télécharger le projet finalisé, [c'est par ici !](tdd-intro-resources/code/TDDFizzBuzz-Final.zip)
+
+Si tu as apprécié cette série sur TDD, n'hésite pas à t'inscrire à la newsletter ci-dessous pour ne rien manquer des prochains articles. 👇
